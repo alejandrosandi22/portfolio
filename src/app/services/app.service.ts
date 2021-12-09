@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AppService {
 
+  scroll:number = 0;
+
   constructor() { }
 }

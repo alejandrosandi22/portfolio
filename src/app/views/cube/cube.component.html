@@ -1,1 +1,18 @@
-<p>cube works!</p>
+<div class="cube-container">
+    <div [ngClass]="{'home':this.app.scroll == 0,'projects':this.app.scroll == 1,'about-me':this.app.scroll == 2}" class="cube" id="cube">
+        <div>
+            <span style="--i:0">
+                <app-nav></app-nav>
+                <app-home></app-home>
+            </span>
+            <span style="--i:1">
+            </span>
+            <span style="--i:2">
+                <app-nav></app-nav>
+            </span>
+            <span style="--i:3">
+                <app-nav></app-nav>
+            </span>
+        </div>
+    </div>
+</div>
