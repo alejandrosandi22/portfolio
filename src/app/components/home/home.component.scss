@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@use '../../sass/mixin.scss';
+@use '../../sass/fonts.scss';
+@use '../../sass/colors.scss';
+@use '../../sass/variables.scss';
 
 .home-section{
-    z-index: 0;
+    z-index: variables.$z_middle;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mixin.center_flex();
     .text-wrap{
         position: relative;
         width: 62vw;
@@ -22,9 +23,9 @@
             font-weight: normal;
             text-transform: uppercase;
             color: transparent;
-            -webkit-text-stroke: 1px #fff;
+            -webkit-text-stroke: 1px colors.$light_color;
             width: fit-content;
-            text-shadow: 0px 10px 20px #000000;
+            text-shadow: 0px 10px 20px colors.$dark_color;
         }
         & > h2{
             position: absolute;
