@@ -1,18 +1,20 @@
+$default_background: #14151B;
+
 .cube-container{
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    background: #13151B;
+    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    perspective: 50000px;
     .cube{
         position: relative;
         width: 100vw;
         height: 100vh;
         transform-style: preserve-3d;
-        animation: animate 10s linear infinite;
         & > div{
             position: absolute;
             top: 0;
@@ -26,34 +28,46 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(300deg, rgba(0,0,0,1) 0%, rgba(19,21,27,1) 100%) repeat 0% 0% / 300% 100%;
+                background: linear-gradient(300deg, rgba(0,0,0,1) 0%, $default_background 100%);
                 transform: rotateX(calc(90deg * var(--i))) translateZ(calc(100vh / 2));
-                animation: background 100s linear infinite;
             }
         }
     }
     .home{
         transform: rotateX(0deg);
-        transition: 3s;
+        transition: 2s;
+        animation: home 2s forwards;
     }
     .projects{
-        transform: rotateX(90deg);
-        transition: 3s;
+        transform: rotateX(90deg) ;
+        transition: 2s;
+        animation: projects 2s forwards;
     }
     .about-me{
-        transform: rotateX(180deg);
-        transition: 3s;
+        animation: about-me 2s forwards;
     }
 }
 
-@keyframes background {
-    0%{
-        background-position: 0% 50%;
+@keyframes home {
+    to{
+        transform: rotateX(0deg);
     }
-    50%{
-        background-position: 100% 50%;
+}
+
+@keyframes projects {
+    0%{
+        transform: rotateX(0deg);
     }
     100%{
-        background-position: 0% 50%;
+        transform: rotateX(90deg);
+    }
+}
+
+@keyframes about-me {
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(180deg);
     }
 }
