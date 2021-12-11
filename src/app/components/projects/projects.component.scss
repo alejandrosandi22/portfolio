@@ -1,0 +1,93 @@
+@use '../../sass/mixin.scss';
+@use '../../sass/fonts.scss';
+@use '../../sass/colors.scss';
+@use '../../sass/variables.scss';
+
+.card-wrapper{
+    height: 70%;
+    width: 70%;
+    @include mixin.center_absolute();
+    @include mixin.center_flex();
+    .card{
+        position: relative;
+        z-index: variables.$z_second;
+        background: colors.$light_color;
+        height: 400px;
+        width: 300px;
+        transform: skewY(-10deg);
+        transition: 1s;
+        &::after{
+            z-index: variables.$z_last;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 100%;
+            transform: skewY(45deg) rotateY(180deg);
+            transform-origin: left;
+            transition: .5s;
+            background: rgba(255,255,255,.5);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: -14px;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: colors.$light_color;
+            transform-origin: bottom;
+            transform: skewX(45deg);
+            transition: .5s;
+        }
+        &:hover{
+            transform: skewY(0deg);
+            transition: 1s;
+            &::after{
+                top: -15px;
+                height: calc(100% + 15px);
+                width: 0;
+            }&::before{
+                transform: skewY(0deg);
+            }
+        }
+        .card-preview{
+            height: 30%;
+            width: 100%;
+            @include mixin.center_flex();
+            & > img{
+                height: 90%;
+            }
+        }
+        .card-title{
+            height: 20%;
+            width: 100%;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            & > h3{
+                font-weight: 300;
+                font-size: 30px;
+                text-transform: uppercase;
+            }
+        }
+        .card-body{
+            height: 30%;
+            width: 100%;
+            margin: 0 10px;
+            & > p{
+                width: 90%;
+                height: 100%;
+            }
+        }
+        .card-actions{
+            height: 20%;
+            width: 100%;
+            @include mixin.center_flex();
+            & > button{
+                @include mixin.button();
+            }
+        }
+    }
+}
