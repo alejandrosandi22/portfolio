@@ -1,0 +1,33 @@
+@use './colors.scss';
+
+@mixin center_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin center_absolute{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@mixin button{
+    height: 40px;
+    width: 120px;
+    outline: none;
+    border: none;
+    color: colors.$light_color;
+    background: colors.$default_background;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover{
+        opacity: .9;
+    }
+    &:active{
+        opacity: .8;
+    }
+}
