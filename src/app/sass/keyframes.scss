@@ -1,0 +1,21 @@
+@mixin move_arrows {
+    @keyframes move_arrows {
+        0%,100%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(-20px);
+        }
+    }
+}
+
+@mixin show_name {
+    @keyframes show_name {
+        from{
+            transform: translateY(0px);
+        }
+        to{
+            transform: translateY(-5px);
+        }
+    }
+}
