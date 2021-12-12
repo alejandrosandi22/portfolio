@@ -1,7 +1,7 @@
-@use '../../sass/mixin.scss';
-@use '../../sass/fonts.scss';
-@use '../../sass/colors.scss';
-@use '../../sass/variables.scss';
+@use '../../shared/sass/mixin.scss';
+@use '../../shared/sass/fonts.scss';
+@use '../../shared/sass/colors.scss';
+@use '../../shared/sass/variables.scss';
 
 .home-section{
     z-index: variables.$z_middle;
@@ -34,7 +34,7 @@
             font-family: 'Open Sans', sans-serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 1vw;
+            font-size: 1.2vw;
             text-transform: uppercase;
             color: rgba(255, 255, 255, 0.26);
         }

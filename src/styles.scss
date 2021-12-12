@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@use './app/sass/fonts.scss';
+@use './app/shared/sass/fonts.scss';
 
 *{
     font-family: fonts.$OpenSans, sans-serif;

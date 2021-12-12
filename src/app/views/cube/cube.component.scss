@@ -1,4 +1,5 @@
-$default_background: #14151B;
+@use './../../shared/sass/colors.scss';
+@use './../../shared/sass/keyframes.scss';
 
 .cube-container{
     z-index: -1;
@@ -15,59 +16,39 @@ $default_background: #14151B;
         width: 100vw;
         height: 100vh;
         transform-style: preserve-3d;
-        & > div{
+        & > span{
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            transform-style: preserve-3d;
-            & > span{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(300deg, rgba(0,0,0,1) 0%, $default_background 100%);
-                transform: rotateX(calc(90deg * var(--i))) translateZ(calc(100vh / 2));
+            max-height: 100vh;
+            background: linear-gradient(300deg, colors.$dark_color 0%, colors.$default_background 100%);
+            &:nth-child(1){
+                transform: rotateX(0deg) translateZ(50vh);
+            }
+            &:nth-child(2){
+                transform: rotateX(90deg) translateZ(50vh);
+            }
+            &:nth-child(3){
+                transform: rotateX(180deg) translateZ(50vh);
+            }
+            &:nth-child(4){
+                transform: rotateX(270deg) translateZ(50vh);
             }
         }
+        
     }
     .home{
-        transform: rotateX(0deg);
-        transition: 2s;
         animation: home 2s forwards;
+        transition: all 2s;
     }
     .projects{
-        transform: rotateX(90deg) ;
-        transition: 2s;
         animation: projects 2s forwards;
     }
     .about-me{
-        animation: about-me 2s forwards;
+        animation: about_me 2s forwards;
     }
 }
 
-@keyframes home {
-    to{
-        transform: rotateX(0deg);
-    }
-}
-
-@keyframes projects {
-    0%{
-        transform: rotateX(0deg);
-    }
-    100%{
-        transform: rotateX(90deg);
-    }
-}
-
-@keyframes about-me {
-    0%{
-        transform: rotateX(0deg);
-    }
-    100%{
-        transform: rotateX(180deg);
-    }
-}
+@include keyframes.rotate_transition();
