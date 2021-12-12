@@ -1,8 +1,8 @@
-@use '../../sass/mixin.scss';
-@use '../../sass/fonts.scss';
-@use '../../sass/colors.scss';
-@use '../../sass/keyframes.scss';
-@use '../../sass/variables.scss';
+@use '../../shared/sass/mixin.scss';
+@use '../../shared/sass/fonts.scss';
+@use '../../shared/sass/colors.scss';
+@use '../../shared/sass/keyframes.scss';
+@use '../../shared/sass/variables.scss';
 
 .about-me-wrapper{
     width: 70%;
@@ -26,6 +26,12 @@
             @include mixin.button();
             margin-top: 40px;
             filter: invert(100%);
+            overflow: hidden    ;
+            & > a{
+                text-decoration: none;
+                color: colors.$light_color;
+                padding: 10px 18px;
+            }
         }
     }
     .technologies-wrapper{

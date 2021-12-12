@@ -1,9 +1,17 @@
 <div (click)="toggle()" [ngClass]="active ? 'active' : ''"  class="toggle"></div>
+<div class="social-media-wrapper">
+    <div class="social-media">
+        <a href="https://github.com/AleSandi22" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:a.sandi.developer@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+        <a href="https://www.facebook.com/LuisAleS22/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>
 <nav [ngClass]="active ? 'activeNav' : ''" class="nav">
     <ul>
-        <li class="li"><a (click)="this.app.scroll = 0" >Home</a></li>
-        <li class="li"><a (click)="this.app.scroll = 1" >Projects</a></li>
-        <li class="li"><a (click)="this.app.scroll = 2" >About Me</a></li>
+        <li class="li"><a (click)="this.app.scroll = 0; this.active = false">Home</a></li>
+        <li class="li"><a (click)="this.app.scroll = 1; this.active = false">Projects</a></li>
+        <li class="li"><a (click)="this.app.scroll = 2; this.active = false">About Me</a></li>
     </ul>
 </nav>
 

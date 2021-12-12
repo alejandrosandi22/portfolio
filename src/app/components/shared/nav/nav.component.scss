@@ -1,8 +1,8 @@
-@use '../../../sass/mixin.scss';
-@use '../../../sass/keyframes.scss';
-@use '../../../sass/colors.scss';
-@use '../../../sass/variables.scss';
-@use '../../../sass/media_query.scss';
+@use '../../../shared/sass/mixin.scss';
+@use '../../../shared/sass/keyframes.scss';
+@use '../../../shared/sass/colors.scss';
+@use '../../../shared/sass/variables.scss';
+@use '../../../shared/sass/media_query.scss';
 
 .toggle{
     z-index: variables.$z_first;
@@ -45,6 +45,37 @@
         background: rgba(colors.$dark_color, 0.2);
     }
 }
+
+.social-media-wrapper{
+    z-index: variables.$z_first;
+    height: 100vh;
+    width: 30px;
+    @include mixin.center_absolute();
+    right: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    .social-media{
+        position: absolute;
+        height: 80%;
+        bottom: 0;
+        & > a{
+            color:  rgba(colors.$light_color, .4);
+            font-size: 20px;
+            &:hover{
+                color:  rgba(colors.$light_color, .2);
+            }
+            &:active{
+                color:  rgba(colors.$light_color, .4);
+            }
+            & > i{
+                margin: 8px 0;
+            }
+        }
+    }
+}
+
 .nav{
     z-index: variables.$z_second;
     position: absolute;
@@ -133,7 +164,7 @@
 }
 .active-arrow{
     transform: rotateX(180deg);
-    transition-delay: 2.5s;
+    transition-delay: 1.5s;
     transition-duration: 1s;
 }
 
