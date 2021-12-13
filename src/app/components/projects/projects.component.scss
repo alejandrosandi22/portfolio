@@ -2,6 +2,7 @@
 @use '../../shared/sass/fonts.scss';
 @use '../../shared/sass/colors.scss';
 @use '../../shared/sass/variables.scss';
+@use '../../shared/sass/media_query.scss';
 
 .projects-section{
     z-index: variables.$z_last;
@@ -34,7 +35,7 @@
                 transform: skewY(45deg) rotateY(180deg);
                 transform-origin: left;
                 transition: .5s;
-                background: rgba(255,255,255,.5);
+                background: rgba(colors.$light_color,.5);
             }
             &::before{
                 content: '';
@@ -99,3 +100,5 @@
         }
     }
 }
+
+@include media_query.projects_responsive();

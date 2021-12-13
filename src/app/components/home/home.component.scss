@@ -2,6 +2,7 @@
 @use '../../shared/sass/fonts.scss';
 @use '../../shared/sass/colors.scss';
 @use '../../shared/sass/variables.scss';
+@use '../../shared/sass/media_query.scss';
 
 .home-section{
     z-index: variables.$z_middle;
@@ -40,3 +41,5 @@
         }
     }
 }
+
+@include media_query.home_responisve();
