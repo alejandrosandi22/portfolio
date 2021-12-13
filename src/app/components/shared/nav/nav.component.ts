@@ -27,15 +27,25 @@ export class NavComponent implements OnInit {
     }
   }
   scrolling(){
-    this.sendClickedAlert.emit('true');
+      this.sendClickedAlert.emit('true');
+      this.app.emitterIdentification = 0;
   }
   homeTransition(){
-    this.sendClickedAlert.emit('home');
+    if (this.app.emitterIdentification != 1) {
+      this.sendClickedAlert.emit('home');
+      this.app.emitterIdentification = 1;
+    }
   }
   projectsTransition(){
-    this.sendClickedAlert.emit('projects');
+    if (this.app.emitterIdentification != 2) {
+      this.sendClickedAlert.emit('projects');
+      this.app.emitterIdentification = 2;
+    }
   }
   aboutMeTransition(){
-    this.sendClickedAlert.emit('aboutMe');
+    if (this.app.emitterIdentification!= 3) {
+      this.sendClickedAlert.emit('aboutMe');
+      this.app.emitterIdentification = 3;
+    }
   }
 }

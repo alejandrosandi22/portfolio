@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class AppService {
 
-  scroll:number = 3;
+  scroll: number = 3;
+  emitterIdentification: number = 1;
 
   constructor() { }
 
