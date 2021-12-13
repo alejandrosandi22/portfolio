@@ -3,6 +3,7 @@
 @use '../../shared/sass/colors.scss';
 @use '../../shared/sass/keyframes.scss';
 @use '../../shared/sass/variables.scss';
+@use '../../shared/sass/media_query.scss';
 
 .about-me-wrapper{
     width: 70%;
@@ -17,10 +18,12 @@
         & > h1{
             color: colors.$light_color;
             margin-bottom: 40px;
+            font-size: 2vw;
         }
         & > p{
             text-align: justify;
             color: colors.$light_color;
+            font-size: 1.2vw;
         }
         & > button{
             @include mixin.button();
@@ -43,8 +46,8 @@
         flex-wrap: wrap;
         & > span{
             position: relative;
-            width: 55px;
-            height: 55px;
+            width: 4.5vw;
+            height: 4.5vw;
             display: flex;
             justify-content: center;
             margin: 20px;
@@ -73,8 +76,8 @@
             &:hover{
                 &::after{
                     background: rgba(colors.$light_color, .8);
-                    width: 55px;
-                    height: 77px;
+                    width: 4.5vw;
+                    height: 5.5vw;
                     transform: translateY(-7px);
                 }
                 &::before{
@@ -82,7 +85,7 @@
                     color: colors.$dark_color;
                     position: absolute;
                     bottom: 0;
-                    width: 55px;
+                    width: 4.5vw;
                     transform: translateY(15px);
                 }
                 & > img{
@@ -91,8 +94,8 @@
             }
             & > img{
                 position: relative;
-                width: 50px;
-                height: 50px;
+                width: 4vw;
+                height: 4vw;
                 @include mixin.center_flex();
                 transition: all .2s linear;
                 &:hover{
@@ -105,3 +108,4 @@
 }
 
 @include keyframes.show_name();
+@include media_query.about_me_responisve();
