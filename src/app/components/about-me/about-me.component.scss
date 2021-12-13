@@ -84,8 +84,9 @@
                     content: attr(data-content);
                     color: colors.$dark_color;
                     position: absolute;
-                    bottom: 0;
+                    bottom: 7px;
                     width: 4.5vw;
+                    font-size: 12px;
                     transform: translateY(15px);
                 }
                 & > img{
