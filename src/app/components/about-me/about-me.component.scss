@@ -84,7 +84,8 @@
                     content: attr(data-content);
                     color: colors.$dark_color;
                     position: absolute;
-                    bottom: 0;
+                    bottom: 8px;
+                    font-size: 12px;
                     width: 4.5vw;
                     transform: translateY(15px);
                 }
