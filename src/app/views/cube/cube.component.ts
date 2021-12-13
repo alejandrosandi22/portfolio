@@ -62,6 +62,10 @@ export class CubeComponent implements OnInit {
         this.app.scroll = 0;
 
         setTimeout(() =>{
+          this.renderer2.setStyle(rotate, 'transform', 'rotateX(180deg) scale(.9) scaleZ(.9)');
+          this.renderer2.setStyle(rotate, 'transition', '.5s')
+        }, 0)
+        setTimeout(() =>{
           this.renderer2.setStyle(rotate, 'transform', 'rotateX(90deg)' + 'scale(.9) scaleZ(.9)');
           this.renderer2.setStyle(rotate, 'transition', '.5s')
         }, 500)
@@ -79,26 +83,48 @@ export class CubeComponent implements OnInit {
 
       this.app.scroll = 0;
 
+        if (this.app.emitterIdentification === 3) {
+          setTimeout(() =>{
+            this.renderer2.setStyle(rotate, 'transform', 'rotateX(180deg) scale(.9) scaleZ(.9)');
+            this.renderer2.setStyle(rotate, 'transition', '.5s')
+          }, 0)
+        }
         setTimeout(() =>{
-          this.renderer2.setStyle(rotate, 'transform', 'rotateX(90deg)' + 'scale(.9) scaleZ(.9)');
+          this.renderer2.setStyle(rotate, 'transform', 'rotateX(90deg) scale(.9) scaleZ(.9)');
           this.renderer2.setStyle(rotate, 'transition', '.5s')
         }, 500)
         setTimeout(() =>{
-          this.renderer2.setStyle(rotate, 'transform', 'rotateX(0deg)' + 'scale(.9) scaleZ(.9)');
+          this.renderer2.setStyle(rotate, 'transform', 'rotateX(0deg) scale(.9) scaleZ(.9)');
           this.renderer2.setStyle(rotate, 'transition', '.5s')
         }, 1000)
         setTimeout(() =>{
-          this.renderer2.setStyle(rotate, 'transform', 'rotateX(0deg)' + 'scale(1) scaleZ(1)');
+          this.renderer2.setStyle(rotate, 'transform', 'rotateX(0deg) scale(1) scaleZ(1)');
           this.renderer2.setStyle(rotate, 'transition', '.5s')
         }, 1500)
     } else if (startTransition === 'projects') {
 
       this.app.scroll = 1;
 
-      setTimeout(() =>{
-        this.renderer2.setStyle(rotate, 'transform', 'rotateX(0deg)' + 'scale(.9) scaleZ(.9)');
-        this.renderer2.setStyle(rotate, 'transition', '.5s')
-      }, 500)
+      if (this.app.emitterIdentification === 1) {
+        setTimeout(() =>{
+          this.renderer2.setStyle(rotate, 'transform', 'rotateX(0deg)' + 'scale(1) scaleZ(1)');
+          this.renderer2.setStyle(rotate, 'transition', '.5s')
+        }, 0)
+        setTimeout(() =>{
+          this.renderer2.setStyle(rotate, 'transform', 'rotateX(0deg)' + 'scale(.9) scaleZ(.9)');
+          this.renderer2.setStyle(rotate, 'transition', '.5s')
+        }, 500)
+      } else if (this.app.emitterIdentification === 3) {
+        setTimeout(() =>{
+          this.renderer2.setStyle(rotate, 'transform', 'rotateX(180deg)' + 'scale(1) scaleZ(1)');
+          this.renderer2.setStyle(rotate, 'transition', '.5s')
+        }, 0)
+        setTimeout(() =>{
+          this.renderer2.setStyle(rotate, 'transform', 'rotateX(180deg)' + 'scale(.9) scaleZ(.9)');
+          this.renderer2.setStyle(rotate, 'transition', '.5s')
+        }, 500)
+      }
+
       setTimeout(() =>{
         this.renderer2.setStyle(rotate, 'transform', 'rotateX(90deg)' + 'scale(.9) scaleZ(.9)');
         this.renderer2.setStyle(rotate, 'transition', '.5s')
@@ -111,6 +137,12 @@ export class CubeComponent implements OnInit {
 
       this.app.scroll = 2;
 
+      if (this.app.emitterIdentification === 1) {
+        setTimeout(() =>{
+          this.renderer2.setStyle(rotate, 'transform', 'rotateX(0deg)' + 'scale(.9) scaleZ(.9)');
+          this.renderer2.setStyle(rotate, 'transition', '.5s')
+        }, 0)
+      }
       setTimeout(() =>{
         this.renderer2.setStyle(rotate, 'transform', 'rotateX(90deg)' + 'scale(.9) scaleZ(.9)');
         this.renderer2.setStyle(rotate, 'transition', '.5s')
