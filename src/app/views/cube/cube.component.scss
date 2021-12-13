@@ -39,7 +39,7 @@
         }
         
     }
-    .home{
+    /* .home{
         animation: home 2s forwards;
         transition: all 2s;
     }
@@ -48,7 +48,7 @@
     }
     .about-me{
         animation: about_me 2s forwards;
-    }
+    } */
 }
 
 @include keyframes.rotate_transition();
