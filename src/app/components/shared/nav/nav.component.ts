@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { AppService } from 'src/app/services/app.service';
 })
 
 export class NavComponent implements OnInit {
+
+  @Output() sendClickedAlert = new EventEmitter();
 
   active: boolean;
   
@@ -24,14 +26,16 @@ export class NavComponent implements OnInit {
       this.active = false;
     }
   }
-
   scrolling(){
-    if(this.app.scroll == 0){
-      this.app.scroll = 1;
-    }else if(this.app.scroll == 1){
-      this.app.scroll = 2;
-    }else{
-      this.app.scroll = 0;
-    }
+    this.sendClickedAlert.emit('true');
+  }
+  homeTransition(){
+    this.sendClickedAlert.emit('home');
+  }
+  projectsTransition(){
+    this.sendClickedAlert.emit('projects');
+  }
+  aboutMeTransition(){
+    this.sendClickedAlert.emit('aboutMe');
   }
 }
