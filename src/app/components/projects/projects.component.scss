@@ -93,7 +93,7 @@
                 height: 20%;
                 width: 100%;
                 @include mixin.center_flex();
-                & > button{
+                & > a{
                     @include mixin.button();
                 }
             }
