@@ -95,6 +95,8 @@
                 @include mixin.center_flex();
                 & > a{
                     @include mixin.button();
+                    text-decoration: none;
+                    @include mixin.center_flex();
                 }
             }
         }
