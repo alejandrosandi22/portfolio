@@ -48,21 +48,19 @@
 
 .social-media-wrapper{
     z-index: variables.$z_first;
-    height: 100vh;
-    width: 1vw;
-    @include mixin.center_absolute();
-    right: initial;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80vh;
+    width: 7vh;
     .social-media{
-        position: absolute;
-        height: 80%;
-        bottom: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
         & > a{
             color:  rgba(colors.$light_color, .4);
-            font-size: 1vw;
+            font-size: 1.1vw;
             &:hover{
                 color:  rgba(colors.$light_color, .2);
             }
@@ -70,7 +68,7 @@
                 color:  rgba(colors.$light_color, .4);
             }
             & > i{
-                margin: 8px 0;
+                margin: 10px 0;
             }
         }
     }
@@ -80,13 +78,14 @@
     z-index: variables.$z_first;
     position: absolute;
     width: 100%;
-    height: 70px;
+    height: 7vh;
     top: 0;
     right: 0;
     & > ul{
         padding: 0;
         position: absolute;
         display: flex;
+        align-items: center;
         right: 2.5vw;
         height: 100%;
         .li{
