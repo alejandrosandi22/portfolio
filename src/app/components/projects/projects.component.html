@@ -1,18 +1,42 @@
 <section class="projects-section">
-    <div class="card-wrapper">
-        <div class="card">
-            <div class="card-preview">
-                <img src="https://i.ibb.co/vwJdFJr/chat-preview.png" alt="image">
+    <div class="cards-container">
+        <div class="go-left">
+            <i (click)="goLeft()" class="fas fa-chevron-left"></i>
+        </div>
+        <div class="all-cards-wrapper">
+            <div #cardWrapper class="card-wrapper">
+                <div class="card">
+                    <div class="card-preview">
+                        <img src="https://i.ibb.co/vwJdFJr/chat-preview.png" alt="image">
+                    </div>
+                    <div class="card-title">
+                        <h3>Chat</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>This is a web app where you can chat with other people. Created with <strong>vue</strong> and <strong>firebase</strong>.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://chat-app.cf/" target="_blank">View</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-preview">
+                        <img src="https://i.ibb.co/T1PMhkb/memory-preview.png" alt="image">
+                    </div>
+                    <div class="card-title">
+                        <h3>Memory</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Memory game, where the score of each player is saved in a global ranking. Created with <strong>angular</strong>, <strong>nodejs</strong> and <strong>postgreslq</strong>.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://memory.ga/" target="_blank">View</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-title">
-                <h3>Chat</h3>
-            </div>
-            <div class="card-body">
-                <p>This is a web app where you can chat with other people. Created with <strong>vue</strong> and <strong>firebase</strong>.</p>
-            </div>
-            <div class="card-actions">
-                <a href="https://chat-app.cf/" target="_blank">View</a>
-            </div>
+        </div>
+        <div (click)="goRight()" class="go-rigth">
+            <i class="fas fa-chevron-right"></i>
         </div>
     </div>
 </section>
