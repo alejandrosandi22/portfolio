@@ -140,6 +140,11 @@
                             .card-actions{
                                 & > a{
                                     transform: scale(.6);
+                                    &:nth-child(2){
+                                        transform: initial;
+                                        font-size: 2vh;
+                                        margin: 0 5px;
+                                    }
                                 }
                             }
                         }

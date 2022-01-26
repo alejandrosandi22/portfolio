@@ -119,6 +119,14 @@
                             @include mixin.button();
                             text-decoration: none;
                             @include mixin.center_flex();
+                            &:nth-child(2){
+                                width: fit-content;
+                                height: fit-content;
+                                background: transparent;
+                                margin: 0 20px;
+                                font-size: 2vw;
+                                color: #14151B;
+                            }
                         }
                     }
                 }
