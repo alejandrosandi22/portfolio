@@ -29,7 +29,8 @@
             @include mixin.button();
             margin-top: 40px;
             filter: invert(100%);
-            overflow: hidden    ;
+            overflow: hidden;
+            font-size: 0.8em;
             & > a{
                 text-decoration: none;
                 color: colors.$light_color;
