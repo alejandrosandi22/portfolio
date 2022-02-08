@@ -1,114 +1,79 @@
 @use '../../shared/sass/mixin.scss';
-@use '../../shared/sass/fonts.scss';
-@use '../../shared/sass/colors.scss';
-@use '../../shared/sass/keyframes.scss';
-@use '../../shared/sass/variables.scss';
-@use '../../shared/sass/media_query.scss';
+@use '../../shared/sass/animations.scss';
+@use '../../shared/sass/responsive.scss';
 
 .about-me-wrapper{
-    width: 70%;
-    height: 60%;
-    @include mixin.center_absolute();
-    display: flex;
+  position: absolute;
+  width: calc(100% - 10rem);
+  height: calc(100% - 30vh);
+  left: 5.5rem;
+  top: 12vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
     .profile-wrapper{
-        height: 80%;
-        width: 45%;
-        @include mixin.center_absolute();
-        right: initial;
-        & > h1{
-            color: colors.$light_color;
-            margin-bottom: 40px;
-            font-size: 2vw;
-        }
-        & > p{
-            text-align: justify;
-            color: colors.$light_color;
-            font-size: 1.2vw;
-        }
-        & > button{
-            @include mixin.button();
-            margin-top: 40px;
-            filter: invert(100%);
-            overflow: hidden;
-            font-size: 0.8em;
-            & > a{
-                text-decoration: none;
-                color: colors.$light_color;
-                padding: 10px 18px;
-            }
-        }
-    }
-    .technologies-wrapper{
-        height: 80%;
-        width: 45%;
-        @include mixin.center_absolute();
-        left: initial;
+      height: 80%;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 2rem;
+      box-sizing: border-box;
+      .title{
+        color: #fff;
+        font-size: 2rem;
+      }
+      .description{
+        text-align: justify;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+      .downolad-cv{
+        @include mixin.button();
         @include mixin.center_flex();
-        flex-wrap: wrap;
-        & > span{
-            position: relative;
-            width: 4.5vw;
-            height: 4.5vw;
+        filter: invert(100%);
+        overflow: hidden;
+        font-size: 0.8rem;
+        text-decoration: none;
+      }
+    }
+    .technologies-container{
+      position: relative;
+      @include mixin.center_flex();
+      height: 80%;
+      width: 45%;
+      .wrapper{
+        position: relative;
+        width: 25rem;
+          height: 25rem;
+        .technologies-wrapper, .technologies-wrapper-shadow{
+          width: 100%;
+          height: 100%;
+          & > span{
             display: flex;
-            justify-content: center;
-            margin: 20px;
-            &::after {
-                transition: .4s;
-                content: '';
-                z-index: variables.$z_penultimate;
-                position: absolute;
-                top: 0;
-                height: 0px;
-                width: 0px;
-                background: rgba(colors.$light_color, 0);
-                border-radius: 5px;
-            }
-            &::before{
-                transition: .4s;
-                content: '';
-                color: colors.$dark_color;
-                position: absolute;
-                bottom: 0;
-                width: 0px;
-                height: 20px;
-                font-size: 10px;
-                text-align: center;
-            }
-            &:hover{
-                &::after{
-                    background: rgba(colors.$light_color, .8);
-                    width: 4.5vw;
-                    height: 5.5vw;
-                    transform: translateY(-7px);
-                }
-                &::before{
-                    content: attr(data-content);
-                    color: colors.$dark_color;
-                    position: absolute;
-                    bottom: 8px;
-                    font-size: 12px;
-                    width: 4.5vw;
-                    font-size: 12px;
-                    transform: translateY(15px);
-                }
-                & > img{
-                    animation: show_name .2s linear forwards;
-                }
-            }
+            justify-content: space-around;
+            width: 100%;
+            height: 33%;
             & > img{
-                position: relative;
-                width: 4vw;
-                height: 4vw;
-                @include mixin.center_flex();
-                transition: all .2s linear;
-                &:hover{
-                    animation: show_name .2s linear forwards;
-                }
+              width: 3rem;
             }
+          }
         }
-        
+        .technologies-wrapper-shadow{
+          position: absolute;
+          top: 4rem;
+          left: .5rem;
+          & > span{
+            & > img{
+              width: 2.25rem;
+              filter: grayscale(100%);
+              opacity: 6%;
+            }
+          }
+        }
+      }
     }
 }
 
-@include keyframes.show_name();
-@include media_query.about_me_responisve();
+@include animations.show_name();
+@include responsive.about-me();

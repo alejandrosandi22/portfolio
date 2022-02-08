@@ -1,12 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
-@use './app/shared/sass/fonts.scss';
-@use './app/shared/sass/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 *{
-    font-family: fonts.$OpenSans, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 body{
-    background: colors.$default_background;
+  background: #14151B;
+}
+
+:root{
+  font-size: 1vw;
+  @media (max-width: 1024px) {
+    font-size: 1.5vh;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 1.2vh;
+  }
 }

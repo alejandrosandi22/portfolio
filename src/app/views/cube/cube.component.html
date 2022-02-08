@@ -1,17 +1,17 @@
 <div class="cube-container">
-    <div #rotateTransition [ngClass]="{'home':this.app.scroll == 0,'projects':this.app.scroll == 1,'about-me':this.app.scroll == 2}" class="cube" id="cube">
-        <span>
-            <app-nav (sendClickedAlert)="scrollTransition($event)"></app-nav>
-            <app-home></app-home>
-        </span>
-        <span></span>
-        <span>
-            <app-nav (sendClickedAlert)="scrollTransition($event)"></app-nav>
-            <app-about-me></app-about-me>
-        </span>
-        <span>
-            <app-nav (sendClickedAlert)="scrollTransition($event)"></app-nav>
-            <app-projects></app-projects>
-        </span>
-    </div>
+  <div #rotateTransition [ngClass]="{'home':this.app.scroll == 0,'projects':this.app.scroll == 1,'about-me':this.app.scroll == 2}" class="cube" id="cube">
+    <span>
+      <app-nav (sendClickedAlert)="scrollTransition($event)"></app-nav>
+      <app-home></app-home>
+    </span>
+    <span></span>
+    <span>
+      <app-nav (sendClickedAlert)="scrollTransition($event)"></app-nav>
+      <app-about-me></app-about-me>
+    </span>
+    <span>
+      <app-nav (sendClickedAlert)="scrollTransition($event)"></app-nav>
+      <app-projects></app-projects>
+    </span>
+  </div>
 </div>
