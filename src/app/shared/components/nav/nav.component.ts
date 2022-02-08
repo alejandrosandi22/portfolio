@@ -43,7 +43,7 @@ export class NavComponent implements OnInit {
     }
   }
   aboutMeTransition(){
-    if (this.app.emitterIdentification!= 3) {
+    if (this.app.emitterIdentification != 3) {
       this.sendClickedAlert.emit('aboutMe');
       this.app.emitterIdentification = 3;
     }

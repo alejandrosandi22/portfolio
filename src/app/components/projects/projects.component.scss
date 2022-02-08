@@ -2,134 +2,135 @@
 @use '../../shared/sass/responsive.scss';
 
 .projects-section{
-    z-index: -20;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  @include mixin.center_flex();
+  z-index: -20;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .cards-container{
+    position: relative;
     @include mixin.center_flex();
-    .cards-container{
-        position: relative;
-        @include mixin.center_flex();
-        width: 80vw;
-        height: 68vh;
-        .go-left, .go-rigth{
-            position: relative;
-            @include mixin.center_flex();
-            width: 10%;
-            height: 100%;
-            display: none;
-            & > i{
-                color: #fff;
-                font-size: 1.5vw;
-                cursor: pointer;
-            }
-        }
-        .all-cards-wrapper{
-            position: relative;
-            @include mixin.center_flex();
-            gap: 40px;
-            width: 80%;
-            height: 100%;
-            overflow: hidden;
-            .card-wrapper{
-                position: absolute;
-                display: flex;
-                .card{
-                    position: relative;
-                    z-index: 10;
-                    background: #fff;
-                    height: 55vh;
-                    width: 40vh;
-                    transform: skewY(-10deg);
-                    margin: 50px;
-                    transition: 1s;
-                    &::after{
-                        z-index: -20;
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 15px;
-                        height: 100%;
-                        transform: skewY(45deg) rotateY(180deg);
-                        transform-origin: left;
-                        transition: .5s;
-                        background: rgba(#fff,.5);
-                    }
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        top: -14px;
-                        left: 0;
-                        width: 100%;
-                        height: 15px;
-                        background: #fff;
-                        transform-origin: bottom;
-                        transform: skewX(45deg);
-                        transition: .5s;
-                    }
-                    &:hover{
-                        transform: skewY(0deg);
-                        transition: 1s;
-                        &::after{
-                            top: -15px;
-                            height: calc(100% + 15px);
-                            width: 0;
-                        }&::before{
-                            transform: skewY(0deg);
-                        }
-                    }
-                    .card-preview{
-                        height: 30%;
-                        width: 100%;
-                        @include mixin.center_flex();
-                        & > img{
-                            height: 90%;
-                        }
-                    }
-                    .card-title{
-                        height: 20%;
-                        width: 100%;
-                        margin: 0 10px;
-                        display: flex;
-                        align-items: center;
-                        & > h3{
-                            font-weight: 300;
-                            font-size: 30px;
-                            text-transform: uppercase;
-                        }
-                    }
-                    .card-body{
-                        height: 30%;
-                        width: 100%;
-                        margin: 0 10px;
-                        & > p{
-                            width: 90%;
-                            height: 100%;
-                        }
-                    }
-                    .card-actions{
-                        height: 20%;
-                        width: 100%;
-                        @include mixin.center_flex();
-                        & > a{
-                            @include mixin.button();
-                            text-decoration: none;
-                            @include mixin.center_flex();
-                            &:nth-child(2){
-                                width: fit-content;
-                                height: fit-content;
-                                background: transparent;
-                                margin: 0 20px;
-                                font-size: 2vw;
-                                color: #14151B;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    width: 80rem;
+    height: 30rem;
+    .go-left, .go-rigth{
+      @include mixin.center_flex();
+      position: relative;
+      width: 10%;
+      height: 100%;
+      display: none;
+      & > i{
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
     }
+    .all-cards-wrapper{
+      position: relative;
+      @include mixin.center_flex();
+      gap: 40px;
+      width: 80%;
+      height: 100%;
+      overflow: hidden;
+      .card-wrapper{
+        position: absolute;
+        display: flex;
+        .card{
+          position: relative;
+          z-index: 10;
+          background: #fff;
+          height: 23rem;
+          width: 17rem;
+          transform: skewY(-10deg);
+          margin: 5rem;
+          transition: 1s;
+          &::after{
+            z-index: -20;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1rem;
+            height: 100%;
+            transform: skewY(45deg) rotateY(180deg);
+            transform-origin: left;
+            transition: .5s;
+            background: rgba(#fff,.5);
+          }
+          &::before{
+            content: '';
+            position: absolute;
+            top: -.98rem;
+            left: 0;
+            width: 100%;
+            height: 1rem;
+            background: #fff;
+            transform-origin: bottom;
+            transform: skewX(45deg);
+            transition: .5s;
+          }
+          &:hover{
+            transform: skewY(0deg);
+            transition: 1s;
+            &::after{
+              top: -15px;
+              height: calc(100% + 1rem);
+              width: 0;
+            }&::before{
+              transform: skewY(0deg);
+            }
+          }
+          .card-preview{
+            height: 30%;
+            width: 100%;
+            @include mixin.center_flex();
+            & > img{
+              height: 90%;
+            }
+          }
+        .card-title{
+            height: 20%;
+            width: 100%;
+            margin: 0 1rem;
+            display: flex;
+            align-items: center;
+            & > h3{
+              font-weight: 300;
+              font-size: 1.5rem;
+              text-transform: uppercase;
+            }
+          }
+          .card-body{
+            height: 30%;
+            width: 100%;
+            margin: 0 1rem;
+            & > p{
+              width: 90%;
+              height: 100%;
+              font-size: .9rem;
+            }
+          }
+          .card-actions{
+            height: 20%;
+            width: 100%;
+            @include mixin.center_flex();
+            justify-content: space-evenly;
+            & > a{
+              @include mixin.button();
+              @include mixin.center_flex();
+              text-decoration: none;
+              &:nth-child(2){
+                width: fit-content;
+                height: fit-content;
+                background: transparent;
+                font-size: 2rem;
+                color: #14151B;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @include responsive.projects();

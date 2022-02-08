@@ -61,13 +61,13 @@
         }
         .technologies-wrapper-shadow{
           position: absolute;
-          top: 4rem;
-          left: .5rem;
+          top: 3.5rem;
+          left: .8rem;
           & > span{
             & > img{
-              width: 2.25rem;
+              width: 2.5rem;
               filter: grayscale(100%);
-              opacity: 6%;
+              opacity: 5%;
             }
           }
         }
