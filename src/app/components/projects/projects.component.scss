@@ -1,11 +1,8 @@
 @use '../../shared/sass/mixin.scss';
-@use '../../shared/sass/fonts.scss';
-@use '../../shared/sass/colors.scss';
-@use '../../shared/sass/variables.scss';
-@use '../../shared/sass/media_query.scss';
+@use '../../shared/sass/responsive.scss';
 
 .projects-section{
-    z-index: variables.$z_last;
+    z-index: -20;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -39,15 +36,15 @@
                 display: flex;
                 .card{
                     position: relative;
-                    z-index: variables.$z_second;
-                    background: colors.$light_color;
+                    z-index: 10;
+                    background: #fff;
                     height: 55vh;
                     width: 40vh;
                     transform: skewY(-10deg);
                     margin: 50px;
                     transition: 1s;
                     &::after{
-                        z-index: variables.$z_last;
+                        z-index: -20;
                         content: '';
                         position: absolute;
                         top: 0;
@@ -57,7 +54,7 @@
                         transform: skewY(45deg) rotateY(180deg);
                         transform-origin: left;
                         transition: .5s;
-                        background: rgba(colors.$light_color,.5);
+                        background: rgba(#fff,.5);
                     }
                     &::before{
                         content: '';
@@ -66,7 +63,7 @@
                         left: 0;
                         width: 100%;
                         height: 15px;
-                        background: colors.$light_color;
+                        background: #fff;
                         transform-origin: bottom;
                         transform: skewX(45deg);
                         transition: .5s;
@@ -135,4 +132,4 @@
     }
 }
 
-@include media_query.projects_responsive();
+@include responsive.projects();

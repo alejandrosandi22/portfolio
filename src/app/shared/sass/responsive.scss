@@ -1,0 +1,157 @@
+@mixin nav {
+  @media (max-width: 1024px){
+    .toggle{
+      display: block;
+    }
+    .nav{
+      right: -200vw;
+      transition: all .5s;
+      & > ul{
+        position: relative;
+        box-sizing: border-box;
+        display: block;
+        width: 98%;
+        right: 0;
+        top: 1vh;
+        height: 98vh;
+        background: linear-gradient(45deg, #ffffff 0%, #a4a4a4 20%);
+        backdrop-filter: blur(14px);
+        opacity: .8;
+        border-radius: 10px;
+        .li{
+          width: 100%;
+          height: 33%;
+          &:nth-child(1),&:nth-child(2){
+            border-bottom: 1px solid rgba(#000, .4);
+          }
+          & > a{
+            font-size: 5vw;
+            color: rgba(#000, 0.8);
+            &::before{
+              display: none;
+            }
+            &::after{
+              display: none; 
+            }
+            &:hover{
+              color: rgba(#000, 0.5);
+            }
+            &:active{
+              color: rgba(#000, 0.5);
+            }
+          }
+        }
+      }
+    }
+    .active-nav{
+      right: -1vw;
+      transition: .5s;
+    }
+
+  }
+  @media (max-width: 720px) {
+    .toggle{
+      top: 4.5rem;
+    }
+  }
+}
+
+@mixin home{
+  @media (max-width: 1024px){
+    .home-section{
+      .text-wrap{
+        & > h1{
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@mixin projects(){
+  @media (max-width: 720px){
+    .projects-section{
+      .cards-container{
+        width: 70vw;
+        height: 60vh;
+        .go-left, .go-rigth{
+          display: flex;
+          & > i{
+            font-size: 5vw;
+          }
+        }
+        .all-cards-wrapper{
+          justify-content: initial;
+          background: linear-gradient(145deg, #111217, #14151b);
+          box-shadow:  6px 6px 12px #111116,
+          -6px -6px 12px #15171c;
+          .card-wrapper{
+            .card{
+              height: 200px;
+              width: 150px;
+              margin: calc((62vw - 150px) / 2);
+              &:hover{
+                transform: skewY(0deg);
+                transition: 1s;
+                &::after{
+                  top: -15px;
+                  height: calc(100% + 15px);
+                  width: 0;
+                }&::before{
+                  transform: skewY(0deg);
+                }
+              }
+              .card-preview{
+                height: 30%;
+                width: 100%;
+                & > img{
+                  height: 90%;
+                }
+              }
+              .card-title{
+                height: 20%;
+                width: 100%;
+                margin: 0 10px;
+                display: flex;
+                align-items: center;
+                & > h3{
+                  font-size: 4.5vw;
+                }
+              }
+              .card-body{
+                height: 30%;
+                width: 100%;
+                margin: 0 10px;
+                & > p{
+                  font-size: 2.1vw;
+                }
+              }
+              .card-actions{
+                & > a{
+                  transform: scale(.6);
+                  &:nth-child(2){
+                    transform: initial;
+                    font-size: 2vh;
+                    margin: 0 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin about-me(){
+  @media (max-width: 1024px){
+    .about-me-wrapper{
+      display: block;
+      .profile-wrapper, .technologies-container{
+        width: 100%;
+        height: 50%;
+      }
+    }
+  }
+}

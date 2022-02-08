@@ -1,45 +1,33 @@
 @use '../../shared/sass/mixin.scss';
-@use '../../shared/sass/fonts.scss';
-@use '../../shared/sass/colors.scss';
-@use '../../shared/sass/variables.scss';
-@use '../../shared/sass/media_query.scss';
+@use '../../shared/sass/responsive.scss';
 
 .home-section{
-    z-index: variables.$z_middle;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    @include mixin.center_flex();
-    .text-wrap{
-        position: relative;
-        width: 62vw;
-        height: 25vh;
-        & > span{
-            position: absolute;
-            display: flex;
-            top: 0;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 7vw;
-            font-style: normal;
-            font-weight: normal;
-            text-transform: uppercase;
-            color: transparent;
-            -webkit-text-stroke: 1px colors.$light_color;
-            width: fit-content;
-            text-shadow: 0px 10px 20px colors.$dark_color;
-        }
-        & > h2{
-            position: absolute;
-            display: flex;
-            bottom: 0;
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1.2vw;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.26);
-        }
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  @include mixin.center_flex();
+  .text-wrap{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    & > h1{
+      font-size: 7rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1px #fff;
+      width: fit-content;
+      text-shadow: 0 1rem 2rem #000;
     }
+    & > h2{
+      font-weight: normal;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: #ffffff42;
+    }
+  }
 }
 
-@include media_query.home_responisve();
+@include responsive.home();
