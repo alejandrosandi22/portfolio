@@ -90,7 +90,7 @@
       position: relative;
       list-style: none;
       width: 9.151vw;
-      height: 50px;
+      height: 50%;
       @include mixin.center_flex();
       & > a{
         font-size: 1.25rem;
