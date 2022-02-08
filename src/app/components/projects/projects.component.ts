@@ -19,30 +19,19 @@ export class ProjectsComponent implements OnInit {
   }
 
   goLeft(){
-    if (window.innerWidth <= 720) {
       if (this.mobileMeasures < 0) {
-        this.mobileMeasures = this.mobileMeasures + ((62 * window.innerWidth) / 100);
+        this.mobileMeasures = this.mobileMeasures + ((56 * window.innerWidth) / 100);
         this.count--;
       }
       this.moving();
-    } else {
-      if (this.move < 0) {
-        this.move = this.move + 192;
-        this.moving();
-      }
-    }
   }
 
   goRight(){
-    if (window.innerWidth <= 720 && this.count < 1) {
-      this.mobileMeasures = this.mobileMeasures - ((62 * window.innerWidth) / 100);
+    if (this.count < 1) {
+      this.mobileMeasures = this.mobileMeasures - ((56 * window.innerWidth) / 100);
+      console.log(((70 * window.innerWidth) / 100))
       this.count++;
       this.moving();
-    } else {
-      if (this.move < 0) {
-        this.move = this.move - 400;
-        this.moving();
-      }
     }
   }
 

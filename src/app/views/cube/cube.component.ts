@@ -23,8 +23,8 @@ export class CubeComponent implements OnInit {
     const rotate = this.rotateEl.nativeElement;
 
     if (startTransition === 'true') {
+      startTransition = 'false';
       if(this.app.scroll === 0 || this.app.scroll > 2){
-
         this.app.scroll = 1;
 
         setTimeout(() =>{
@@ -79,7 +79,7 @@ export class CubeComponent implements OnInit {
         }, 1500)
       }
 
-    } else if (startTransition === 'home') {
+    } else if (startTransition === 'home' && this.app.emitterIdentification != 1) {
 
       this.app.scroll = 0;
 
@@ -101,7 +101,7 @@ export class CubeComponent implements OnInit {
           this.renderer2.setStyle(rotate, 'transform', 'rotateX(0deg) scale(1) scaleZ(1)');
           this.renderer2.setStyle(rotate, 'transition', '.5s')
         }, 1500)
-    } else if (startTransition === 'projects') {
+    } else if (startTransition === 'projects' && this.app.emitterIdentification != 2) {
 
       this.app.scroll = 1;
 
