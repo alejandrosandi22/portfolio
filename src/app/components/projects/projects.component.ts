@@ -12,6 +12,7 @@ export class ProjectsComponent implements OnInit {
   count:number = 0;
   move:number = 0;
   mobileMeasures:number = 0;
+  desktopMeasures: number = 0;
 
   constructor(private renderer2: Renderer2, private el: ElementRef) { }
 
@@ -19,26 +20,41 @@ export class ProjectsComponent implements OnInit {
   }
 
   goLeft(){
+    if (window.innerWidth < 1024) {
       if (this.mobileMeasures < 0) {
         this.mobileMeasures = this.mobileMeasures + ((56 * window.innerWidth) / 100);
         this.count--;
       }
       this.moving();
+    } else {
+      if (this.desktopMeasures < 0) {
+        this.desktopMeasures = this.desktopMeasures + 17;
+        this.count--;
+      }
+      this.moving();
+    }
   }
 
   goRight(){
-    if (this.count < 1) {
-      this.mobileMeasures = this.mobileMeasures - ((56 * window.innerWidth) / 100);
-      console.log(((70 * window.innerWidth) / 100))
-      this.count++;
-      this.moving();
+    if (window.innerWidth < 1024) {
+      if (this.count < 2) {
+        this.mobileMeasures = this.mobileMeasures - ((56 * window.innerWidth) / 100);
+        this.count++;
+        this.moving();
+      }
+    } else {
+      if (this.count < 1) {
+        this.desktopMeasures = this.desktopMeasures - 17;
+        this.count++;
+        this.moving();
+      }
     }
   }
 
   moving(){
     const cardWrapper = this.cardWrapper.nativeElement;
 
-    this.renderer2.setStyle(cardWrapper, 'transform', `translate(${this.mobileMeasures}px)`);
+    this.renderer2.setStyle(cardWrapper, 'transform', `translate(${window.innerWidth < 1024 ? `${this.mobileMeasures}px` : `${this.desktopMeasures}rem`})`);
     this.renderer2.setStyle(cardWrapper, 'transition', '1s');
   }
 
