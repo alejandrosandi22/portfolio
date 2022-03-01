@@ -17,7 +17,6 @@
       position: relative;
       width: 10%;
       height: 100%;
-      display: none;
       & > i{
         color: #fff;
         font-size: 1.5rem;
@@ -26,11 +25,15 @@
     }
     .all-cards-wrapper{
       position: relative;
-      @include mixin.center_flex();
+      display: flex;
+      align-items: center;
       gap: 40px;
       width: 80%;
       height: 100%;
       overflow: hidden;
+      background: #14151B;
+      box-shadow: inset .25rem .25rem .8rem #08080b,
+                  inset -.25rem -.25rem .8rem #20222b;
       .card-wrapper{
         position: absolute;
         display: flex;
