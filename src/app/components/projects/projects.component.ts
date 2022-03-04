@@ -37,7 +37,7 @@ export class ProjectsComponent implements OnInit {
 
   goRight(){
     if (window.innerWidth < 1024) {
-      if (this.count < 2) {
+      if (this.count < 3) {
         this.mobileMeasures = this.mobileMeasures - ((56 * window.innerWidth) / 100);
         this.count++;
         this.moving();
