@@ -28,7 +28,7 @@ export class ProjectsComponent implements OnInit {
       this.moving();
     } else {
       if (this.desktopMeasures < 0) {
-        this.desktopMeasures = this.desktopMeasures + 17;
+        this.desktopMeasures = this.desktopMeasures + 25;
         this.count--;
       }
       this.moving();
@@ -43,8 +43,8 @@ export class ProjectsComponent implements OnInit {
         this.moving();
       }
     } else {
-      if (this.count < 1) {
-        this.desktopMeasures = this.desktopMeasures - 17;
+      if (this.count < 2) {
+        this.desktopMeasures = this.desktopMeasures - 25;
         this.count++;
         this.moving();
       }
@@ -55,7 +55,7 @@ export class ProjectsComponent implements OnInit {
     const cardWrapper = this.cardWrapper.nativeElement;
 
     this.renderer2.setStyle(cardWrapper, 'transform', `translate(${window.innerWidth < 1024 ? `${this.mobileMeasures}px` : `${this.desktopMeasures}rem`})`);
-    this.renderer2.setStyle(cardWrapper, 'transition', '1s');
+    this.renderer2.setStyle(cardWrapper, 'transition', '.7s');
   }
 
 }
