@@ -2,12 +2,6 @@
 
 .next-button-wrapper {
   z-index: 100;
-  position: absolute;
-  bottom: 3rem;
-  width: fit-content;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
   .fa-chevron-double-down {
     color: var(--link);
     font-size: 2.5rem;

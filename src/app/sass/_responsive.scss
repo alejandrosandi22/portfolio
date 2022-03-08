@@ -14,9 +14,7 @@
   @media (max-width: 1024px) {
     .nav-container{
       .toggle-wrapper{
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
+        float: right;
         width: 3rem;
         height: 3rem;
         display: flex;
@@ -100,6 +98,61 @@
           font-size: 1rem;
         }
       }
+    }
+  }
+}
+
+@mixin about-me {
+  @media (max-width: 720px) {
+    .about-me-container {
+      .wrapper {
+        .view-container {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@mixin technologies {
+  @media (max-width: 1024px) {
+    .technologies-container {
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      .wrapper {
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+  }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    .technologies-container {
+      width: 50%;
+      height: 100%;
+      right: 0;
+      .wrapper {
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+  }
+}
+
+@mixin profile {
+  @media (max-width: 1024px) {
+    .profile-wrapper {
+      width: 100%;
+      height: 50%;
+      top: 0;
+      padding: 0 1rem;
+    }
+  }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    .profile-wrapper {
+      width: 50%;
+      height: 100%;
+      left: 0;
     }
   }
 }
