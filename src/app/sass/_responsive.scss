@@ -89,13 +89,17 @@
 
 @mixin home {
   @media (max-width: 1024px) {
-    .home-wrapper {
-      .text-wrapper {
-        .name{
-          font-size: 2rem;
-        }
-        .subtitle{
-          font-size: 1rem;
+    .home-container {
+      .wrapper {
+        .view-container {
+          .text-wrapper {
+            .name{
+              font-size: 2.5rem;
+            }
+            .subtitle{
+              font-size: 1rem;
+            }
+          }
         }
       }
     }
