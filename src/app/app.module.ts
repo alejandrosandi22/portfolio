@@ -2,23 +2,35 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { AboutMeComponent } from './components/about-me/about-me.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { NavComponent } from './shared/components/nav/nav.component';
-import { CubeComponent } from './views/cube/cube.component';
+import { HomeComponent } from './views/home/home.component';
+import { ProjectsComponent } from './views/projects/projects.component';
+import { AboutMeComponent } from './views/about-me/about-me.component';
+import { NavComponent } from './components/shared/nav/nav.component';
+import { ContactComponent } from './components/shared/contact/contact.component';
+import { NextButtonComponent } from './components/shared/next-button/next-button.component';
+import { TechnologiesComponent } from './components/technologies/technologies.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ScrollingDirective } from './directives/scrolling.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutMeComponent,
     ProjectsComponent,
+    AboutMeComponent,
     NavComponent,
-    CubeComponent
+    ContactComponent,
+    NextButtonComponent,
+    TechnologiesComponent,
+    CardsComponent,
+    SliderComponent,
+    ProfileComponent,
+    ScrollingDirective
   ],
   imports: [
-    BrowserModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

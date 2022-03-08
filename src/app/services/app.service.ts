@@ -5,9 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class AppService {
 
-  scroll: number = 3;
-  emitterIdentification: number = 1;
+  public element: HTMLDivElement;
+  public views: any;
 
-  constructor() { }
-
+  constructor() {
+    this.views = {current: 'home', next: 'projects'}
+    this.element = null;
+  }
 }

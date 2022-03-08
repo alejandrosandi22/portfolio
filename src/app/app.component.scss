@@ -1,0 +1,54 @@
+@use './sass/responsive';
+
+.App{
+  position: absolute;
+  background: #000;
+  background: linear-gradient(140deg, #20222b 0%, #14151b 33%, #08080b 66%, #000000 100%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  perspective: 900rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .cube{
+    box-sizing: border-box;
+    position: relative;
+    width: 95%;
+    height: 95%;
+    transform-style: preserve-3d;
+    //animation: rotate 10s linear infinite;
+    .face{
+      border: .1rem solid red;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(140deg, #20222b 0%, #14151b 33%, #08080b 66%, #000000 100%);
+      &:nth-child(1){
+        transform: rotateX(0deg) translateZ(47.5vh);
+      }
+      &:nth-child(2){
+        transform: rotateX(90deg) translateZ(47.5vh);
+      }
+      &:nth-child(3){
+        transform: rotateX(180deg) translateZ(47.5vh);
+      }
+      &:nth-child(4){
+        transform: rotateX(270deg) translateZ(47.5vh);
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotateX(0deg) scale(.7) scaleZ(.7);
+  }
+  100%{
+    transform: rotateX(360deg) scale(.7) scaleZ(.7);
+  }
+}
+
+@include responsive.app();
