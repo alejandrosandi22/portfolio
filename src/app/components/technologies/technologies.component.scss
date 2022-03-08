@@ -1,0 +1,43 @@
+@use '../../sass/responsive';
+
+.technologies-container {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    .technologies-wrapper, .technologies-wrapper-shadow {
+      width: 100%;
+      height: 100%;
+      & > span {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 33%;
+        & > img {
+          width: 3.2rem;
+        }
+      }
+    }
+    .technologies-wrapper-shadow {
+      position: absolute;
+      top: 3.5rem;
+      left: .8rem;
+      & > span {
+        & > img {
+          width: 2.5rem;
+          filter: grayscale(100%);
+          opacity: 5%;
+        }
+      }
+    }
+  }
+}
+
+@include responsive.technologies();

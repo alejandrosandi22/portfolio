@@ -7,15 +7,16 @@
     font-size: 1.8vh;
   }
   @media (max-width: 720px) {
-    font-size: 1.8vh;
+    font-size: 1.5vh;
   }
   @media (max-width: 1024px) and (orientation: landscape) {
-    font-size: 1vw;
+    font-size: 1.2vw;
   }
 }
 
 * {
   margin: 0;
+  padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
 
