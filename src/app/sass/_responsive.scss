@@ -1,0 +1,105 @@
+@mixin app {
+  @media (min-width: 2048px) {
+    .App{
+      perspective: 450vw;
+      .cube{
+        width: 85%;
+        height: 85%;
+      }
+    }
+  }
+}
+
+@mixin nav {
+  @media (max-width: 1024px) {
+    .nav-container{
+      .toggle-wrapper{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .toggle, .toggle::after, .toggle::before{
+          z-index: 200;
+          content: '';
+          position: absolute;
+          width: 2rem;
+          height: .1rem;
+          background: var(--link);
+          transition: .1s;
+        }
+        .toggle{
+          top: 1rem;
+        }
+        .toggle::before{
+          top: .5rem;
+        }
+        .toggle::after{
+          top: 1rem;
+        }
+        .active{
+          top: unset;
+          transform: rotate(-45deg);
+          transition: .2s;
+          &::before{
+            top: 0;
+            transform: rotate(90deg);
+          }
+          &::after{
+            all: unset;
+          }
+        }
+      }
+      .bg{
+        background: linear-gradient(300deg, rgba(160, 160, 160, .1), rgba(255, 255, 255, .1));
+        backdrop-filter: blur(5rem);
+      }
+      .nav{
+        z-index: 100;
+        position: absolute;
+        top: 5.1rem;
+        right: 1rem;
+        width: 90%;
+        height: 45%;
+        flex-direction: column;
+        transition: .6s;
+        background: linear-gradient(300deg, rgba(160, 160, 160, .1), rgba(255, 255, 255, .1));
+        backdrop-filter: blur(5rem);
+        transform-origin: top right;
+        li{
+          height: 100%;
+          width: 100%;
+          border-bottom: .1rem solid var(--link);
+          &:nth-child(3){
+            border-bottom: unset;
+          }
+          &::after, &::before{
+            all: unset;
+          }
+        }
+      }
+      .hide{
+        transform: scale(0);
+        transition: .6s;
+      }
+    }
+  }
+}
+
+@mixin home {
+  @media (max-width: 1024px) {
+    .home-wrapper {
+      .text-wrapper {
+        .name{
+          font-size: 2rem;
+        }
+        .subtitle{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

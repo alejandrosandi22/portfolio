@@ -1,0 +1,32 @@
+@use '../../sass/responsive';
+
+.home-wrapper {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .text-wrapper {
+    .name{
+      font-size: 7rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: .08rem #fff;
+      width: fit-content;
+      text-shadow: 0 1rem 2rem #000;
+    }
+    .subtitle{
+      font-weight: normal;
+      font-size: 1.35rem;
+      text-transform: uppercase;
+      color: var(--link)
+    }
+  }
+}
+
+@include responsive.home();
