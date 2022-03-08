@@ -17,7 +17,6 @@
     width: 95%;
     height: 95%;
     transform-style: preserve-3d;
-    //animation: rotate 10s linear infinite;
     .face{
       border: .1rem solid red;
       position: absolute;
@@ -39,15 +38,6 @@
         transform: rotateX(270deg) translateZ(47.5vh);
       }
     }
-  }
-}
-
-@keyframes rotate {
-  0%{
-    transform: rotateX(0deg) scale(.7) scaleZ(.7);
-  }
-  100%{
-    transform: rotateX(360deg) scale(.7) scaleZ(.7);
   }
 }
 
