@@ -2,7 +2,6 @@
 
 .App{
   position: absolute;
-  background: #000;
   background: linear-gradient(140deg, #20222b 0%, #14151b 33%, #08080b 66%, #000000 100%);
   width: 100%;
   height: 100%;
@@ -14,11 +13,10 @@
   .cube{
     box-sizing: border-box;
     position: relative;
-    width: 95%;
-    height: 95%;
+    width: 97.5%;
+    height: 97.5%;
     transform-style: preserve-3d;
     .face{
-      border: .1rem solid red;
       position: absolute;
       top: 0;
       left: 0;
@@ -26,16 +24,16 @@
       height: 100%;
       background: linear-gradient(140deg, #20222b 0%, #14151b 33%, #08080b 66%, #000000 100%);
       &:nth-child(1){
-        transform: rotateX(0deg) translateZ(47.5vh);
+        transform: rotateX(0deg) translateZ(48.75vh);
       }
       &:nth-child(2){
-        transform: rotateX(90deg) translateZ(47.5vh);
+        transform: rotateX(90deg) translateZ(48.75vh);
       }
       &:nth-child(3){
-        transform: rotateX(180deg) translateZ(47.5vh);
+        transform: rotateX(180deg) translateZ(48.75vh);
       }
       &:nth-child(4){
-        transform: rotateX(270deg) translateZ(47.5vh);
+        transform: rotateX(270deg) translateZ(48.75vh);
       }
     }
   }

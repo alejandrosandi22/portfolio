@@ -3,8 +3,44 @@
     .App{
       perspective: 450vw;
       .cube{
-        width: 85%;
-        height: 85%;
+        width: 91%;
+        height: 91%;
+        .face {
+          &:nth-child(1){
+            transform: rotateX(0deg) translateZ(45vh);
+          }
+          &:nth-child(2){
+            transform: rotateX(90deg) translateZ(45vh);
+          }
+          &:nth-child(3){
+            transform: rotateX(180deg) translateZ(45vh);
+          }
+          &:nth-child(4){
+            transform: rotateX(270deg) translateZ(45vh);
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .App {
+      .cube {
+        width: 95%;
+        height: 95%;
+        .face {
+          &:nth-child(1){
+            transform: rotateX(0deg) translateZ(47.5vh);
+          }
+          &:nth-child(2){
+            transform: rotateX(90deg) translateZ(47.5vh);
+          }
+          &:nth-child(3){
+            transform: rotateX(180deg) translateZ(47.5vh);
+          }
+          &:nth-child(4){
+            transform: rotateX(270deg) translateZ(47.5vh);
+          }
+        }
       }
     }
   }
@@ -64,7 +100,7 @@
         height: 45%;
         flex-direction: column;
         transition: .6s;
-        background: linear-gradient(300deg, rgba(160, 160, 160, .1), rgba(255, 255, 255, .1));
+        background: linear-gradient(rgba(#14151B, .5), rgba(#14151B, 1));
         backdrop-filter: blur(5rem);
         transform-origin: top right;
         li{
@@ -123,7 +159,7 @@
     .technologies-container {
       width: 100%;
       height: 50%;
-      bottom: 0;
+      bottom: 2.5rem;
       .wrapper {
         width: 25rem;
         height: 25rem;
@@ -157,6 +193,16 @@
       width: 50%;
       height: 100%;
       left: 0;
+    }
+  }
+}
+
+@mixin cards {
+  @media (max-width: 720px) {
+    .card {
+      height: 23rem;
+      width: 15rem;
+      margin: calc((65vw - 15rem) / 2);
     }
   }
 }

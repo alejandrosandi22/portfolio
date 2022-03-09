@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import rest from '../../services/rest.js';
+
 
 @Component({
   selector: 'app-cards',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
-  constructor() { }
+  public projects: any;
+
+  constructor() {
+    this.projects = rest;
+   }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,30 @@
+[
+  {
+    "image": "https://i.ibb.co/vwJdFJr/chat-preview.png",
+    "title": "Chat",
+    "description": "This is a web app where you can chat with other people. Created with Vue js and Firebase",
+    "url": "https://chat.alejandrosandi.ml",
+    "github": "https://github.com/AleSandi22/Chat"
+  },
+  {
+    "image": "https://i.ibb.co/27kRrQb/tic-tac-toe.png",
+    "title": "Tic Tac Toe",
+    "description": "Tic tac toe game is the classic game noughts and crosses, is twith multiplayer or local mode. Created with Vue js and Firebase.",
+    "url": "https://tic-tac-toe.alejandrosandi.ml",
+    "github": "https://github.com/AleSandi22/tic-tac-toe"
+  },
+  {
+    "image": "https://i.ibb.co/K5kJ2WF/pomodoro-preview.png",
+    "title": "Pomodoro",
+    "description": "The Pomodoro technique is a method to improve the management of the time dedicated to an activity. Created with React js and Typescript",
+    "url": "https://pomodoro.alejandrosandi.ml",
+    "github": "https://github.com/AleSandi22/pomodoro"
+  },
+  {
+    "image": "https://i.ibb.co/VQkS3F4/memory-preview.png",
+    "title": "Memory",
+    "description": "Memory game, where the score of each player is saved in a global ranking. Created with Angular and Firebase.",
+    "url": "https://memory.alejandrosandi.ml",
+    "github": "https://github.com/AleSandi22/memory"
+  }
+]

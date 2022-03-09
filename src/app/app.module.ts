@@ -30,7 +30,7 @@ import { ScrollingDirective } from './directives/scrolling.directive';
     ScrollingDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
