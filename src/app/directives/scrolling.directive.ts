@@ -71,12 +71,12 @@ export class ScrollingDirective {
   //html div element, current degrees in the current view, next degrees to join in the next view
   prueba(cubeRef: HTMLDivElement, currentDeg: number, nextDeg: number ) {
     setTimeout(() => {
-      this.renderer2.setStyle(cubeRef, 'transform', `rotateX(${currentDeg}deg) scale(.9) scaleZ(.9)`);
+      this.renderer2.setStyle(cubeRef, 'transform', `rotateX(${currentDeg}deg) scale(.85) scaleZ(.85)`);
       this.renderer2.setStyle(cubeRef, 'transition', '.5s')
     }, this.transitionTime);
 
     setTimeout(() => {
-      this.renderer2.setStyle(cubeRef, 'transform', `rotateX(${nextDeg}deg) scale(.9) scaleZ(.9)`);
+      this.renderer2.setStyle(cubeRef, 'transform', `rotateX(${nextDeg}deg) scale(.85) scaleZ(.85)`);
       this.renderer2.setStyle(cubeRef, 'transition', '.5s');
     }, this.transitionTime * 2);
 

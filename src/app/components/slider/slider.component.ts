@@ -36,7 +36,6 @@ export class SliderComponent implements OnInit {
       }
       this.scrolling();
     }
-    console.log('left')
   }
   public scrollRight() {
     if (window.innerWidth <= 1024) {
@@ -52,7 +51,6 @@ export class SliderComponent implements OnInit {
       }
       this.scrolling();
     }
-    console.log('right')
     this.scrolling();
   }
 
