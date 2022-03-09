@@ -17,7 +17,6 @@ export class NavComponent implements OnInit {
   }
 
   setToggle() {
-    console.log('active')
     if (!this.isActive) this.isActive = true;
     else this.isActive = false;
   }

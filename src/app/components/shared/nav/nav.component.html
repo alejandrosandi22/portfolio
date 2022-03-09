@@ -3,8 +3,8 @@
     <div (click)="setToggle()" class="toggle" [ngClass]="this.isActive ? 'active' : ''"></div>
   </div>
   <nav class="nav" [ngClass]="!this.isActive ? 'hide' : ''">
-    <li appScrolling id="home">Home</li>
-    <li appScrolling id="projects">Projects</li>
-    <li appScrolling id="about-me">About Me</li>
+    <li appScrolling (click)="setToggle()" id="home">Home</li>
+    <li appScrolling (click)="setToggle()" id="projects">Projects</li>
+    <li appScrolling (click)="setToggle()" id="about-me">About Me</li>
   </nav>
 </div>

@@ -1,1 +1,9 @@
-<p>slider works!</p>
+<div class="slider">
+  <div (click)="scrollLeft()" class="scroll-left"><i class="fas fa-chevron-left"></i></div>
+  <div class="cards-wrapper">
+    <div #scroll class="scroll">
+      <app-cards></app-cards>
+    </div>
+  </div>
+  <div (click)="scrollRight()" class="scroll-right"><i class="fas fa-chevron-right"></i></div>
+</div>
