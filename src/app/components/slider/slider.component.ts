@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'app-slider',
@@ -13,7 +14,7 @@ export class SliderComponent implements OnInit {
   private mobileMeasures: number;
   private desktopMeasures: number;
 
-  constructor(private renderer2: Renderer2) {
+  constructor(private renderer2: Renderer2, public app: AppService) {
     this.count = 0;
     this.mobileMeasures = 0;
     this.desktopMeasures = 0;
@@ -39,13 +40,13 @@ export class SliderComponent implements OnInit {
   }
   public scrollRight() {
     if (window.innerWidth <= 1024) {
-      if (this.count < 3) {
+      if (this.count < this.app.projects.length - 1) {
         this.mobileMeasures = this.mobileMeasures - ((65 * window.innerWidth) / 100);
         this.count++;
       }
       this.scrolling();
     } else {
-      if (this.count < 2) {
+      if (this.count < this.app.projects.length - 2) {
         this.desktopMeasures = this.desktopMeasures - 25;
         this.count++;
       }
