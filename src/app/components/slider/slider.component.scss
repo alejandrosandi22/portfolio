@@ -1,3 +1,5 @@
+@import '../../sass/animations';
+
 .slider {
   position: absolute;
   top: 0;
@@ -38,5 +40,20 @@
         align-items: center;
       }
     }
+    .loading {
+      position: absolute;
+      height: 100%;
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .fa-spinner-third {
+        font-size: 4rem;
+        color: #fff;
+        animation: spinner 1s infinite;
+      }
+    }
+
   }
 }
+

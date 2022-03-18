@@ -13,6 +13,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ScrollingDirective } from './directives/scrolling.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ScrollingDirective } from './directives/scrolling.directive';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
