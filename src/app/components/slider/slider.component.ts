@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
+import { RestService } from 'src/app/services/rest.service';
 
 @Component({
   selector: 'app-slider',
@@ -14,13 +15,22 @@ export class SliderComponent implements OnInit {
   private mobileMeasures: number;
   private desktopMeasures: number;
 
-  constructor(private renderer2: Renderer2, public app: AppService) {
+  constructor(private renderer2: Renderer2, public app: AppService, public rest: RestService) {
     this.count = 0;
     this.mobileMeasures = 0;
     this.desktopMeasures = 0;
   }
 
   ngOnInit(): void {
+    this.loadProjects();
+  }
+
+  public loadProjects() {
+    this.rest.get(`https://portfolio-alejandrosandi.herokuapp.com/`)
+    .subscribe(res => {
+      this.app.projects = res;
+      this.app.loading = false;
+    })
   }
 
   public scrollLeft() {

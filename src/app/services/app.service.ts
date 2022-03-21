@@ -14,6 +14,6 @@ export class AppService {
     this.views = {current: 'home', next: 'projects'}
     this.element = null;
     this.projects = [];
-    this.loading = false;
+    this.loading = true;
   }
 }
