@@ -23,6 +23,9 @@
         & > img {
           width: 3.2rem;
         }
+        .nextjs {
+          filter: invert(100%);
+        }
       }
     }
     .technologies-wrapper-shadow {
@@ -34,6 +37,9 @@
           width: 2.5rem;
           filter: grayscale(100%);
           opacity: 5%;
+        }
+        .nextjs {
+          filter: invert(100%);
         }
       }
     }

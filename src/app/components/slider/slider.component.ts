@@ -26,11 +26,54 @@ export class SliderComponent implements OnInit {
   }
 
   public loadProjects() {
-    this.rest.get(`https://portfolio-alejandrosandi.herokuapp.com/`)
-    .subscribe(res => {
-      this.app.projects = res;
+    
+    const allProjects = [
+       {
+        "image": "https://i.ibb.co/wRSGzx9/projects-manager-preview.png",
+        "title": "Projects",
+        "description": "Projects manager app. Created with Next JS, GraphQL and MongoDB",
+        "url": "https://projects-manager.alejandrosandi.com/",
+        "github": "https://github.com/AleSandi22/projects"
+      },
+      {
+        "image": "https://i.ibb.co/vwJdFJr/chat-preview.png",
+        "title": "Chat",
+        "description": "This is a web app where you can chat with other people. Created with Vue js and Firebase",
+        "url": "https://chat.alejandrosandi.com",
+        "github": "https://github.com/AleSandi22/chat"
+      },
+      {
+        "image": "https://i.ibb.co/V3BTLQG/gym-manage-preview.png",
+        "title": "Payment Manager",
+        "description": "Client's payment manager of a gym. Created with React, Typescript, Node.js and PostgreSQL.",
+        "url": "https://payment-manager.alejandrosandi.com/",
+        "github": "https://github.com/AleSandi22/gym-manage-frontend"
+      },
+      {
+        "image": "https://i.ibb.co/27kRrQb/tic-tac-toe.png",
+        "title": "Tic Tac Toe",
+        "description": "Tic tac toe game is the classic game noughts and crosses, is twith multiplayer or local mode. Created with Vue js and Firebase.",
+        "url": "https://tic-tac-toe.alejandrosandi.com",
+        "github": "https://github.com/AleSandi22/tic-tac-toe"
+      },
+      {
+        "image": "https://i.ibb.co/K5kJ2WF/pomodoro-preview.png",
+        "title": "Pomodoro",
+        "description": "The Pomodoro technique is a method to improve the management of the time dedicated to an activity. Created with React js and Typescript",
+        "url": "https://pomodoro.alejandrosandi.com",
+        "github": "https://github.com/AleSandi22/pomodoro"
+      },
+      {
+        "image": "https://i.ibb.co/VQkS3F4/memory-preview.png",
+        "title": "Memory",
+        "description": "Memory game, where the score of each player is saved in a global ranking. Created with Angular and Firebase.",
+        "url": "https://memory.alejandrosandi.com",
+        "github": "https://github.com/AleSandi22/memory"
+      }
+    ]
+
+      this.app.projects = allProjects;
       this.app.loading = false;
-    })
   }
 
   public scrollLeft() {
