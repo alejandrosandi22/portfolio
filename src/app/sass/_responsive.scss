@@ -1,22 +1,21 @@
+$translateZHeight: 16.75vh;
+
 @mixin app {
   @media (min-width: 2048px) {
     .App{
-      perspective: 450vw;
+      perspective: 50rem;
       .cube{
-        width: 95%;
-        height: 95%;
+        width: 33.4%;
+        height: 33.4%;
         .face {
           &:nth-child(1){
-            transform: rotateX(0deg) translateZ(47.5vh);
+            transform: rotateX(0deg) translateZ($translateZHeight);
           }
           &:nth-child(2){
-            transform: rotateX(90deg) translateZ(47.5vh);
+            transform: rotateX(180deg) translateZ($translateZHeight);
           }
           &:nth-child(3){
-            transform: rotateX(180deg) translateZ(47.5vh);
-          }
-          &:nth-child(4){
-            transform: rotateX(270deg) translateZ(47.5vh);
+            transform: rotateX(270deg) translateZ($translateZHeight);
           }
         }
       }
@@ -44,6 +43,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: .5rem 1.5rem 0 0;
         .toggle, .toggle::after, .toggle::before{
           z-index: 200;
           content: '';
@@ -190,7 +190,7 @@
 @mixin cards {
   @media (max-width: 720px) {
     .card {
-      height: 23rem;
+      height: 26rem;
       width: 15rem;
       margin: calc((65vw - 15rem) / 2);
     }

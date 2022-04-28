@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
-import { RestService } from 'src/app/services/rest.service';
 
 @Component({
   selector: 'app-cards',

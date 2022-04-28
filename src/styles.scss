@@ -3,11 +3,14 @@
 
 :root {
   font-size: 1vw;
+  @media (min-width: 2048px) {
+    font-size: .5vh;
+  }
   @media (max-width: 1024px) {
     font-size: 1.8vh;
   }
   @media (max-width: 720px) {
-    font-size: 1.3vh;
+    font-size: 1.5vh;
   }
   @media (max-width: 1024px) and (orientation: landscape) {
     font-size: 1.2vw;
@@ -18,12 +21,4 @@
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-}
-
-@media not all and (min-resolution: .001dpcm) {
-  @supports (-webkit-appearance:none) and (stroke-color: transparent) {
-    body {
-      min-height: -webkit-fill-available;
-    }
-  }
 }
