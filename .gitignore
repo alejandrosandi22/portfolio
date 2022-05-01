@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 
 /backend/node_modules
+.next
