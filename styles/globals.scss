@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+  --link: #A0A0A0;
+  --link-hover: #E0E0E0;
+  --card-background: #fff;
+  --card-dark-side: #B0B0B0;
+  font-size: 1vw;
+  @media (min-width: 2048px) {
+    font-size: .5vh;
+  }
+  @media (max-width: 1024px) {
+    font-size: 1.5vh;
+  }
+  @media (max-width: 720px) {
+    font-size: 1.5vh;
+  }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    font-size: 1.2vw;
+  }
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}

@@ -1,0 +1,8 @@
+.contact {
+  font-size: 1.5rem;
+  color: var(--link);
+  cursor: pointer;
+  &:hover {
+    color: var(--link-hover);
+  }
+}
