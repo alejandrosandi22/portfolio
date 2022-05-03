@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import projectsReducer  from './projectsReducer';
+import rotateReducer from './rotateReducer';
 
 export const store = configureStore({
   reducer: {
-    projects: projectsReducer
+    projects: projectsReducer,
+    rotate: rotateReducer
   }
 })
 

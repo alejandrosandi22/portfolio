@@ -1,0 +1,36 @@
+.a {
+  height: 2.5rem;
+  width: 7rem;
+  font-size: .9rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #14151B;
+  border-radius: .2rem;
+  cursor: pointer;
+  &:hover {
+    opacity: .9;
+  }
+  &:active {
+    opacity: .8;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  &:nth-child(2){
+    width: fit-content;
+    height: fit-content;
+    background: transparent;
+    font-size: 2rem;
+    color: #14151B;
+  }
+}
+
+@media (max-width: 1024px) {
+  .a {
+    height: 3.5rem;
+    width: 8.5rem;
+    font-size: 1.1rem;
+  }
+}

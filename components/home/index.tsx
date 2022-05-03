@@ -2,8 +2,9 @@ import styles from '../../styles/Home.module.scss';
 import Nav from '../shared/nav';
 import Contacts from '../shared/contacts';
 import NextButton from '../shared/nextButton';
+import React from 'react';
 
-export default function Home() {
+function Home() {
   return (
     <>
     <Nav />
@@ -22,3 +23,5 @@ export default function Home() {
     </>
   )
 }
+
+export default React.memo(Home);

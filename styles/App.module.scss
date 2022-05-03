@@ -36,3 +36,22 @@ $translateZMeasure: 50vh;
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .app {
+    .cube {
+      .face {
+        padding: 0;
+        &:nth-child(1) {
+          transform: rotateX(0deg) translateZ($translateZMeasure);
+        }
+        &:nth-child(2) {
+          transform: rotateX(180deg) translateZ($translateZMeasure);
+        }
+        &:nth-child(3) {
+          transform: rotateX(270deg) translateZ($translateZMeasure);
+        }
+      }
+    }
+  }
+}
