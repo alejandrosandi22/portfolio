@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import styles from '../styles/App.module.scss';
 import Home from '../components/home';
 import Projects from '../components/projects';
-import { useAppDispatch, useAppSelector } from '../hooks';
-import { setProjects } from '../store/projectsReducer';
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { setProjects } from '../../store/projectsReducer';
 import AboutMe from '../components/aboutMe';
 
 export default function App({ projects }: any) {

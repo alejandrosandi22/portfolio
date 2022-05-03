@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import { Provider } from 'react-redux';
-import { store } from '../../store';
+import { store } from '../../../store';
 
 interface ChildrenProps {
   children?: ReactNode ;

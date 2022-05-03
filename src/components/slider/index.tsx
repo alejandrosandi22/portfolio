@@ -1,6 +1,6 @@
 import styles from '../../styles/Slider.module.scss';
 import Card from '../card';
-import { useAppSelector } from '../../hooks';
+import { useAppSelector } from '../../../hooks';
 import { useEffect, useRef, useState } from 'react';
 
 interface ProjectType {

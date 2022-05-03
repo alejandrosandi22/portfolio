@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../hooks';
-import { setRotate } from '../../../store/rotateReducer';
+import { useAppDispatch, useAppSelector } from '../../../../hooks';
+import { setRotate } from '../../../../store/rotateReducer';
 import styles from '../../../styles/Nav.module.scss';
 
 export default function Nav() {

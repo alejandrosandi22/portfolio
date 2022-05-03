@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from '../../../hooks';
-import { setRotate } from '../../../store/rotateReducer';
+import { useAppDispatch, useAppSelector } from '../../../../hooks';
+import { setRotate } from '../../../../store/rotateReducer';
 import styles from '../../../styles/NextButton.module.scss';
 
 export default function NextButton() {
