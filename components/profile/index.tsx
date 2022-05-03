@@ -6,7 +6,7 @@ export default function Profile() {
     <>
     <div className={styles.profileWrapper}>
       <h1>Who I am?</h1>
-      <p>I'm a web developer. I have experience in projects with Javascript and Typescript, using frameworks as Angular, Vue js and React js. I like to learn and relearn about different technologies and tools. Also, I investigate about what I don't know and what I know, because there always exist something new to learn.</p>
+      <p>I am a web developer,that I had worked in personal projects using technologies like Javascript, Typescript, and frameworks as Angular, Vue js and React js. I like to learn and investigate about different technologies and tools to progress as a professional and as a person.</p>
       <Button href='/Alejandro_Sandí_CV.pdf' caption='Download CV'/>
       <div className={styles.contactsWrapper}>
         <Contacts />
