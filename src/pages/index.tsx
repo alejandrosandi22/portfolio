@@ -59,7 +59,7 @@ export default function App({ projects }: any) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch('http://localhost:3000/api/projects');
+  const res = await fetch('https://62708508d0eca44e37e8fcc0--taupe-fairy-a2eb95.netlify.app//api/projects');
   const data = await res.json();
   return {
     props:{
