@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem 0 0 0;
+  margin: 23px 0 0 0;
   padding: 0 8rem 0 12rem;
   .logoWrapper {
     position: relative;
@@ -30,19 +30,19 @@
       height: 100%;
       cursor: pointer;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         width: 0;
-        height: .1rem;
+        height: 0.1rem;
         background: var(--link);
-        transition: .25s;
+        transition: 0.25s;
       }
       &:hover {
         color: var(--link-hover);
         &::before {
           width: 8rem;
-          transition: .25s;
+          transition: 0.25s;
         }
       }
     }
@@ -50,8 +50,8 @@
 }
 
 @media (max-width: 1024px) {
-  .nav{
-    padding: 1rem 0 0 2rem;
+  .nav {
+    padding: 0 0 0 2rem;
     .toggleWrapper {
       position: relative;
       float: right;
@@ -60,21 +60,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: .5rem 1.5rem 0 0;
-      .toggle, .toggle::after, .toggle::before {
+      margin: 0 1.5rem 0 0;
+      .toggle,
+      .toggle::after,
+      .toggle::before {
         z-index: 200;
-        content: '';
+        content: "";
         position: absolute;
         width: 2rem;
-        height: .1rem;
+        height: 0.1rem;
         background: var(--link);
-        transition: .1s;
+        transition: 0.1s;
       }
       .toggle {
         top: 1rem;
       }
       .toggle::before {
-        top: .5rem;
+        top: 0.5rem;
       }
       .toggle::after {
         top: 1rem;
@@ -82,7 +84,7 @@
       .active {
         top: unset;
         transform: rotate(-45deg);
-        transition: .2s;
+        transition: 0.2s;
         &::before {
           top: 0;
           transform: rotate(90deg);
@@ -93,7 +95,11 @@
       }
     }
     .bg {
-      background: linear-gradient(300deg, rgba(160, 160, 160, .1), rgba(255, 255, 255, .1));
+      background: linear-gradient(
+        300deg,
+        rgba(160, 160, 160, 0.1),
+        rgba(255, 255, 255, 0.1)
+      );
       backdrop-filter: blur(5rem);
     }
     ul {
@@ -106,25 +112,26 @@
       width: 90%;
       height: 50vh;
       flex-direction: column;
-      transition: .6s;
-      background: linear-gradient(rgba(#14151B, .5), rgba(#14151B, 1));
+      transition: 0.6s;
+      background: linear-gradient(rgba(#14151b, 0.5), rgba(#14151b, 1));
       backdrop-filter: blur(5rem);
       transform-origin: top right;
       li {
         height: 100%;
         width: 100%;
-        border-bottom: .1rem solid var(--link);
+        border-bottom: 0.1rem solid var(--link);
         &:nth-child(3) {
           border-bottom: unset;
         }
-        &::after, &::before{
+        &::after,
+        &::before {
           all: unset;
         }
       }
     }
     .hidde {
       transform: scale(0);
-      transition: .6s;
+      transition: 0.6s;
     }
   }
 }

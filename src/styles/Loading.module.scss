@@ -1,11 +1,20 @@
 .div {
   position: absolute;
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100%;
-  background: linear-gradient(140deg, #20222b 0%, #14151b 33%, #08080b 66%, #000000 100%);
+  background: linear-gradient(
+    140deg,
+    #20222b 0%,
+    #14151b 33%,
+    #08080b 66%,
+    #000000 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   h1 {
     position: relative;
     text-transform: uppercase;
@@ -16,7 +25,7 @@
     width: fit-content;
     span {
       &::before {
-        content: '. . .';
+        content: ". . .";
         position: absolute;
         margin: 0 0 0 1rem;
         width: 0%;
@@ -29,10 +38,19 @@
 }
 
 @keyframes animate {
-  0%, 100% {
+  0%,
+  100% {
     width: 0%;
   }
   50% {
     width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .div {
+    h1 {
+      font-size: 3.5rem;
+    }
   }
 }

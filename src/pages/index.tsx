@@ -1,15 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
-import styles from '../styles/App.module.scss';
-import Home from '../components/home';
-import Projects from '../components/projects';
-import { useAppDispatch, useAppSelector } from '../../hooks';
-import { setProjects } from '../../store/projectsReducer';
-import AboutMe from '../components/aboutMe';
+import { useEffect, useRef, useState } from "react";
+import styles from "../styles/App.module.scss";
+import Home from "../components/home";
+import Projects from "../components/projects";
+import { useAppDispatch, useAppSelector } from "../../hooks";
+import { setProjects } from "../../store/projectsReducer";
+import AboutMe from "../components/aboutMe";
 
 export default function App({ projects }: any) {
-
   const { rotate } = useAppSelector((state) => state.rotate);
-  const [ rotateStyle, setRotateStyle ] = useState<{}>({});
+  const [rotateStyle, setRotateStyle] = useState<{}>({});
   const timeTransition = useRef<number>(500);
   const dispatch = useAppDispatch();
 
@@ -22,48 +21,49 @@ export default function App({ projects }: any) {
     setTimeout(() => {
       setRotateStyle({
         transform: `rotateX(${rotate.degrees.current}deg) scale(.85) scaleZ(.85)`,
-        transition: '.5s'
-      })
+        transition: ".5s",
+      });
     }, timeTransition.current);
 
     setTimeout(() => {
       setRotateStyle({
         transform: `rotateX(${rotate.degrees.next}deg) scale(.85) scaleZ(.85)`,
-        transition: '.5s'
-      })
+        transition: ".5s",
+      });
     }, timeTransition.current * 2);
 
     setTimeout(() => {
       setRotateStyle({
         transform: `rotateX(${rotate.degrees.next}deg) scale(1) scaleZ(1)`,
-        transition: '.5s'
-      })
+        transition: ".5s",
+      });
     }, timeTransition.current * 3);
-  }, [rotate])
+  }, [rotate]);
 
   return (
-  <div className={styles.app}>
-    <div style={rotateStyle} className={styles.cube}>
-      <span className={styles.face}>
-        <Home />
-      </span>
-      <span className={styles.face}>
-        <AboutMe />
-      </span>
-      <span className={styles.face}>
-        <Projects />
-      </span>
+    <div className={styles.app}>
+      <div style={rotateStyle} className={styles.cube}>
+        <span className={styles.face}>
+          <Home />
+        </span>
+        <span className={styles.face}>
+          <AboutMe />
+        </span>
+        <span className={styles.face}>
+          <Projects />
+        </span>
+      </div>
     </div>
-  </div>
   );
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch('https://alejandrosandi.com/api/projects');
+  //const res = await fetch("https://alejandrosandi.com/api/projects");
+  const res = await fetch("http://localhost:3000/api/projects");
   const data = await res.json();
   return {
-    props:{
-      projects: data
-    }
-  }
-}
+    props: {
+      projects: data,
+    },
+  };
+};

@@ -1,6 +1,7 @@
 .slider {
   width: 90vw;
-  height: 35rem;
+  max-width: 1500px;
+  height: 560px;
   display: flex;
   aside {
     width: 10%;
@@ -20,6 +21,7 @@
   main {
     position: relative;
     width: 65vw;
+    max-width: 1500px;
     height: 100%;
     overflow: hidden;
     .scrollable {
@@ -27,6 +29,17 @@
       height: 100%;
       min-width: 100%;
       display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    aside {
+      i {
+        font-size: 25px;
+      }
     }
   }
 }

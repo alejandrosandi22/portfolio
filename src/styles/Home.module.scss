@@ -34,7 +34,7 @@ $translateZMeasure: 2rem;
         font-weight: 200;
         font-size: 2.5rem;
         text-transform: uppercase;
-        color: var(--link)
+        color: var(--link);
       }
     }
     .contactsWrapper {
@@ -51,7 +51,7 @@ $translateZMeasure: 2rem;
     transform: rotateX(0deg);
   }
   100% {
-      transform: rotateX(-360deg);
+    transform: rotateX(-360deg);
   }
 }
 
@@ -59,9 +59,12 @@ $translateZMeasure: 2rem;
   .home {
     .view {
       span {
-        h1{
-          font-size: 4.5rem;
+        h1 {
+          font-size: 3.5rem;
           text-align: center;
+        }
+        h2 {
+          font-size: 2rem;
         }
       }
     }

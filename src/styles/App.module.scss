@@ -2,10 +2,23 @@ $translateZMeasure: 50vh;
 
 .app {
   position: absolute;
-  background: linear-gradient(140deg, #20222b 0%, #14151b 33%, #08080b 66%, #000000 100%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: linear-gradient(
+    140deg,
+    #20222b 0%,
+    #14151b 33%,
+    #08080b 66%,
+    #000000 100%
+  );
   background: #000;
   width: 100%;
+  max-width: 2048px;
   height: 100%;
+  max-height: 1080px;
   overflow: hidden;
   perspective: 900rem;
   display: flex;
@@ -20,10 +33,15 @@ $translateZMeasure: 50vh;
       position: absolute;
       top: 0;
       left: 0;
-      padding: 1.5rem;
       width: 100%;
       height: 100%;
-      background: linear-gradient(140deg, #20222b 0%, #14151b 33%, #08080b 66%, #000000 100%);
+      background: linear-gradient(
+        140deg,
+        #20222b 0%,
+        #14151b 33%,
+        #08080b 66%,
+        #000000 100%
+      );
       &:nth-child(1) {
         transform: rotateX(0deg) translateZ($translateZMeasure);
       }
@@ -32,25 +50,6 @@ $translateZMeasure: 50vh;
       }
       &:nth-child(3) {
         transform: rotateX(270deg) translateZ($translateZMeasure);
-      }
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  .app {
-    .cube {
-      .face {
-        padding: 0;
-        &:nth-child(1) {
-          transform: rotateX(0deg) translateZ($translateZMeasure);
-        }
-        &:nth-child(2) {
-          transform: rotateX(180deg) translateZ($translateZMeasure);
-        }
-        &:nth-child(3) {
-          transform: rotateX(270deg) translateZ($translateZMeasure);
-        }
       }
     }
   }

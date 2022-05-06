@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .8s;
+  transition: 0.8s;
   transition-delay: 1.8s;
   .nextButton {
     border: none;
@@ -17,7 +17,7 @@
     font-size: 2.5rem;
     animation: next-button-movement 1s linear infinite;
     cursor: pointer;
-    &:hover{
+    &:hover {
       color: var(--link-hover);
     }
   }
@@ -25,15 +25,24 @@
 .isActive {
   transform-origin: center;
   transform: rotateX(180deg);
-  transition: .8s;
+  transition: 0.8s;
   transition-delay: 1.8s;
 }
 
 @keyframes next-button-movement {
-  0%, 100%{
-    transform: translateY(0rem) ;
+  0%,
+  100% {
+    transform: translateY(0rem);
   }
-  50%{
+  50% {
     transform: translateY(-1rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .nextButtonWrapper {
+    .nextButton {
+      font-size: 2rem;
+    }
   }
 }

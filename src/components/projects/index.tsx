@@ -1,17 +1,17 @@
-import React from 'react';
-import styles from '../../styles/Projects.module.scss';
-import Nav from '../shared/nav';
-import NextButton from '../shared/nextButton';
-import Slider from '../slider';
+import React from "react";
+import styles from "../../styles/Projects.module.scss";
+import Nav from "../shared/nav";
+import NextButton from "../shared/nextButton";
+import Slider from "../slider";
 
 function Projects() {
-  return(
+  return (
     <>
-    <Nav />
-    <div className={styles.projects}>
-      <Slider />
-    </div>
-    <NextButton />
+      <Nav />
+      <div className={styles.projects}>
+        <Slider />
+      </div>
+      <NextButton />
     </>
   );
 }
