@@ -6,6 +6,9 @@
   --card-background: #fff;
   --card-dark-side: #b0b0b0;
   font-size: 16px;
+  @media (max-width: 1366px) {
+    font-size: 14px;
+  }
   @media (max-width: 720px) {
     font-size: 12px;
   }
