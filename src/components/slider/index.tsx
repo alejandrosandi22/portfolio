@@ -1,7 +1,7 @@
 import styles from "../../styles/Slider.module.scss";
 import Card from "../card";
 import { useAppSelector } from "../../../hooks";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ProjectType {
   image: string;
@@ -15,7 +15,7 @@ interface ProjectType {
 
 export default function Slider() {
   const gettingProjects = useAppSelector((state) => state.projects.projects);
-  const [projects, setProjects] = useState<any>([]);
+  const [projects, setProjects] = useState<ProjectType[]>([]);
 
   const [count, setCount] = useState<number>(0);
   const [desktopMeasure, setDesktopMeasure] = useState<number>(0);
@@ -53,9 +53,7 @@ export default function Slider() {
     }
   };
 
-  useEffect(() => {
-    setProjects(gettingProjects);
-  }, [gettingProjects]);
+  useEffect(() => setProjects(gettingProjects), [gettingProjects]);
 
   useEffect(() => {
     setScroll({
