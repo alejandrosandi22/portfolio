@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import styles from "../styles/App.module.scss";
-import Home from "../components/home";
-import Projects from "../components/projects";
-import { useAppDispatch, useAppSelector } from "../../hooks";
-import { setProjects } from "../../store/projectsReducer";
-import AboutMe from "../components/aboutMe";
+import { useEffect, useRef, useState } from 'react';
+import styles from '../styles/App.module.scss';
+import Home from '../components/home';
+import Projects from '../components/projects';
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { setProjects } from '../../store/projectsReducer';
+import AboutMe from '../components/aboutMe';
 
 export default function App({ projects }: any) {
   const { rotate } = useAppSelector((state) => state.rotate);
@@ -21,21 +21,21 @@ export default function App({ projects }: any) {
     setTimeout(() => {
       setRotateStyle({
         transform: `rotateX(${rotate.degrees.current}deg) scale(.85) scaleZ(.85)`,
-        transition: ".5s",
+        transition: '.5s',
       });
     }, timeTransition.current);
 
     setTimeout(() => {
       setRotateStyle({
         transform: `rotateX(${rotate.degrees.next}deg) scale(.85) scaleZ(.85)`,
-        transition: ".5s",
+        transition: '.5s',
       });
     }, timeTransition.current * 2);
 
     setTimeout(() => {
       setRotateStyle({
         transform: `rotateX(${rotate.degrees.next}deg) scale(1) scaleZ(1)`,
-        transition: ".5s",
+        transition: '.5s',
       });
     }, timeTransition.current * 3);
   }, [rotate]);
@@ -58,7 +58,7 @@ export default function App({ projects }: any) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch("https://alejandrosandi.com/api/projects");
+  const res = await fetch('https://alejandrosandi.com/api/projects');
   const data = await res.json();
   return {
     props: {

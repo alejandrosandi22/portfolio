@@ -1,7 +1,7 @@
-import styles from "../../styles/Slider.module.scss";
-import Card from "../card";
-import { useAppSelector } from "../../../hooks";
-import { useEffect, useState } from "react";
+import styles from '../../styles/Slider.module.scss';
+import Card from '../card';
+import { useAppSelector } from '../../../hooks';
+import { useEffect, useState } from 'react';
 
 interface ProjectType {
   image: string;
@@ -60,14 +60,14 @@ export default function Slider() {
       transform: `translate(${
         window.innerWidth < 1200 ? `${mobileMeasure}px` : `${desktopMeasure}px`
       })`,
-      transition: ".7s",
+      transition: '.7s',
     });
   }, [desktopMeasure, mobileMeasure]);
 
   return (
     <div className={styles.slider}>
       <aside>
-        <i onClick={() => scrollLeft()} className="fas fa-chevron-left"></i>
+        <i onClick={() => scrollLeft()} className='fas fa-chevron-left'></i>
       </aside>
       <main>
         <span style={scroll} className={styles.scrollable}>
@@ -77,7 +77,7 @@ export default function Slider() {
         </span>
       </main>
       <aside>
-        <i onClick={() => scrollRight()} className="fas fa-chevron-right"></i>
+        <i onClick={() => scrollRight()} className='fas fa-chevron-right'></i>
       </aside>
     </div>
   );

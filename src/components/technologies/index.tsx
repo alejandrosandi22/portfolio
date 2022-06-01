@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useReducer, useRef } from "react";
-import styles from "../../styles/Technologies.module.scss";
+import React, { useEffect, useMemo, useReducer, useRef } from 'react';
+import styles from '../../styles/Technologies.module.scss';
 
 interface StateType {
   front: string;
@@ -14,16 +14,16 @@ interface ActionType {
 }
 
 const initialState: StateType = {
-  front: "devicon-html5-plain colored",
-  left: "devicon-css3-plain colored",
-  right: "devicon-sass-original colored",
-  back: "devicon-javascript-plain colored",
+  front: 'devicon-html5-plain colored',
+  left: 'devicon-css3-plain colored',
+  right: 'devicon-sass-original colored',
+  back: 'devicon-javascript-plain colored',
 };
 
 function reducer(state: any, action: any) {
   const { type, payload } = action;
 
-  if (type === "CHANGE_ICON_ACTION")
+  if (type === 'CHANGE_ICON_ACTION')
     return {
       ...state,
       ...payload,
@@ -33,20 +33,20 @@ function reducer(state: any, action: any) {
 function Technologies() {
   const technologies = useMemo(
     () => [
-      "devicon-html5-plain colored",
-      "devicon-css3-plain colored",
-      "devicon-sass-original colored",
-      "devicon-javascript-plain colored",
-      "devicon-typescript-plain colored",
-      "devicon-react-original colored",
-      "devicon-angularjs-plain colored",
-      "devicon-vuejs-plain colored",
+      'devicon-html5-plain colored',
+      'devicon-css3-plain colored',
+      'devicon-sass-original colored',
+      'devicon-javascript-plain colored',
+      'devicon-typescript-plain colored',
+      'devicon-react-original colored',
+      'devicon-angularjs-plain colored',
+      'devicon-vuejs-plain colored',
       `devicon-nextjs-original ${styles.nextjs}`,
-      "devicon-nodejs-plain colored",
-      "devicon-git-plain colored",
-      "devicon-graphql-plain colored",
-      "devicon-mongodb-plain colored",
-      "devicon-firebase-plain colored",
+      'devicon-nodejs-plain colored',
+      'devicon-git-plain colored',
+      'devicon-graphql-plain colored',
+      'devicon-mongodb-plain colored',
+      'devicon-firebase-plain colored',
     ],
     []
   );
@@ -61,7 +61,7 @@ function Technologies() {
     preload.current = false;
     setInterval(() => {
       dispatch({
-        type: "CHANGE_ICON_ACTION",
+        type: 'CHANGE_ICON_ACTION',
         payload: { right: technologies[index.current] },
       });
       index.current++;
@@ -71,7 +71,7 @@ function Technologies() {
     setTimeout(() => {
       setInterval(() => {
         dispatch({
-          type: "CHANGE_ICON_ACTION",
+          type: 'CHANGE_ICON_ACTION',
           payload: { back: technologies[index.current] },
         });
         index.current++;
@@ -82,7 +82,7 @@ function Technologies() {
     setTimeout(() => {
       setInterval(() => {
         dispatch({
-          type: "CHANGE_ICON_ACTION",
+          type: 'CHANGE_ICON_ACTION',
           payload: { left: technologies[index.current] },
         });
         index.current++;
@@ -93,7 +93,7 @@ function Technologies() {
     setTimeout(() => {
       setInterval(() => {
         dispatch({
-          type: "CHANGE_ICON_ACTION",
+          type: 'CHANGE_ICON_ACTION',
           payload: { front: technologies[index.current] },
         });
         index.current++;
@@ -107,7 +107,7 @@ function Technologies() {
     preload.current = false;
     setInterval(() => {
       dispatch({
-        type: "CHANGE_ICON_ACTION",
+        type: 'CHANGE_ICON_ACTION',
         payload: { right: technologies[index.current] },
       });
       index.current++;
@@ -117,7 +117,7 @@ function Technologies() {
     setTimeout(() => {
       setInterval(() => {
         dispatch({
-          type: "CHANGE_ICON_ACTION",
+          type: 'CHANGE_ICON_ACTION',
           payload: { back: technologies[index.current] },
         });
         index.current++;
@@ -128,7 +128,7 @@ function Technologies() {
     setTimeout(() => {
       setInterval(() => {
         dispatch({
-          type: "CHANGE_ICON_ACTION",
+          type: 'CHANGE_ICON_ACTION',
           payload: { left: technologies[index.current] },
         });
         index.current++;
@@ -139,7 +139,7 @@ function Technologies() {
     setTimeout(() => {
       setInterval(() => {
         dispatch({
-          type: "CHANGE_ICON_ACTION",
+          type: 'CHANGE_ICON_ACTION',
           payload: { front: technologies[index.current] },
         });
         index.current++;
