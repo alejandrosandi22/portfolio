@@ -46,7 +46,7 @@ export default function Slider() {
         setCount(count + 1);
       }
     } else {
-      if (count < 1) {
+      if (count < 2) {
         setDesktopMeasure(desktopMeasure - (67 * window.innerWidth) / 100);
         setCount(count + 1);
       }

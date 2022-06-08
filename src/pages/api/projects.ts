@@ -16,10 +16,20 @@ export default function handler(
 ) {
   res.status(200).json([
     {
+      image: 'https://i.ibb.co/XW932dX/sp-api-preview.png',
+      title: 'SP-API',
+      description:
+        'Is an api of soccer products to use in a e-commerce. Created with Next.js, Typescript and MongoDB',
+      url: 'https://sp-api.alejandrosandi.com/',
+      github: 'https://github.com/alejandrosandi22/sp-api',
+      createdAt: 'May, 2022',
+      endAt: 'Jun, 2022',
+    },
+    {
       image: 'https://i.ibb.co/wRSGzx9/projects-manager-preview.png',
       title: 'Projects',
       description:
-        'Projects manager app. Created with Next JS, GraphQL and MongoDB',
+        'Projects manager app. Created with Next.js, GraphQL and MongoDB',
       url: 'https://projects-manager.alejandrosandi.com/',
       github: 'https://github.com/alejandrosandi22/projects',
       createdAt: 'Mar, 2022',
@@ -36,7 +46,7 @@ export default function handler(
       endAt: 'Jan, 2022',
     },
     {
-      image: 'https://i.ibb.co/V3BTLQG/gym-manage-preview.png',
+      image: 'https://i.ibb.co/v15pkdF/payment-manager-preview.png',
       title: 'Payment Manager',
       description:
         "Client's payment manager of a gym. Created with React, Typescript, Node.js and PostgreSQL.",
