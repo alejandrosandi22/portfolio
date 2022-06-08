@@ -1,14 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-interface ProjectsType {
-  image: string;
-  title: string;
-  description: string;
-  url: string;
-  github: string;
-  createdAt: string;
-  endAt: string;
-}
+import { ProjectsType } from 'types';
 
 export default function handler(
   _req: NextApiRequest,

@@ -5,8 +5,9 @@ import Projects from '../components/projects';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { setProjects } from '../../store/projectsReducer';
 import AboutMe from '../components/aboutMe';
+import { ProjectsType } from 'types';
 
-export default function App({ projects }: any) {
+export default function App({ projects }: { projects: ProjectsType[] }) {
   const { rotate } = useAppSelector((state) => state.rotate);
   const [rotateStyle, setRotateStyle] = useState<{}>({});
   const timeTransition = useRef<number>(500);
@@ -58,9 +59,8 @@ export default function App({ projects }: any) {
 }
 
 export const getServerSideProps = async () => {
-  //const res: Response = await fetch('https://alejandrosandi.com/api/projects');
-  const res: Response = await fetch('http://localhost:3000/api/projects');
-  const data = await res.json();
+  const res: Response = await fetch('https://alejandrosandi.com/api/projects');
+  const data: ProjectsType[] = await res.json();
   return {
     props: {
       projects: data,
