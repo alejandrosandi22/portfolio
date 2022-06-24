@@ -45,16 +45,6 @@ export default function App({ projects }: { projects: ProjectsType[] }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  if (process.env.NODE_ENV === 'development') {
-    const res: Response = await fetch('http://localhost:3000/api/projects');
-    const data: ProjectsType[] = await res.json();
-    return {
-      props: {
-        projects: data,
-      },
-    };
-  }
-
   const res: Response = await fetch('https://alejandrosandi.com/api/projects');
   const data: ProjectsType[] = await res.json();
 
