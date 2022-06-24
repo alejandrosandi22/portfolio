@@ -1,16 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../../styles/Card.module.scss';
 import Image from 'next/image';
-
-interface CardProps {
-  image: string;
-  title: string;
-  description: string;
-  url: string;
-  github: string;
-  createdAt: string;
-  endAt: string;
-}
+import { ProjectsType } from 'types';
+import { useRouter } from 'next/router';
 
 function Card({
   image,
@@ -20,28 +12,52 @@ function Card({
   github,
   createdAt,
   endAt,
-}: CardProps) {
+}: ProjectsType) {
+  const [src, setSrc] = useState(image);
+  const router = useRouter();
   return (
     <div className={styles.card}>
       <div className={styles.preview}>
-        <Image src={image} alt='preview' layout='fill' loading='lazy' />
+        <Image
+          onError={() => setSrc('/static/images/error-image-generic.webp')}
+          placeholder='blur'
+          blurDataURL={image}
+          src={src}
+          alt={title}
+          loading='lazy'
+          layout='fill'
+        />
       </div>
-      <div className={styles.title}>
-        <h3>{title}</h3>
+      <div className={styles.titleWrapper}>
+        <h2 className={styles.title}>{title}</h2>
       </div>
       <div className={styles.body}>
         <p>{description}</p>
       </div>
       <div className={styles.time}>
-        <h6>Created at: {createdAt}</h6>
-        <h6>Finished at: {endAt}</h6>
+        {router.asPath === '/' ? (
+          <>
+            <p>Created at: {createdAt}</p>
+            <p>Finished at: {endAt}</p>
+          </>
+        ) : (
+          <>
+            <p>Empezado en: {createdAt}</p>
+            <p>Terminado en: {endAt}</p>
+          </>
+        )}
       </div>
       <div className={styles.actions}>
         <a href={url} target='_blank' rel='noreferrer'>
-          View
+          {router.asPath === '/' ? 'View' : 'Ver'}
         </a>
-        <a href={github} target='_blank' rel='noreferrer'>
-          <i className='fab fa-github'></i>
+        <a
+          className={styles.githubButton}
+          href={github}
+          target='_blank'
+          rel='noreferrer'
+        >
+          <Image src='/static/icons/github.webp' layout='fill' alt='github' />
         </a>
       </div>
     </div>

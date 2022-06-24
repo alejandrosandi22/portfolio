@@ -1,19 +1,13 @@
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Layout from '../components/layout';
-import { useEffect, useState } from 'react';
-import Loading from '../components/loading';
+import { Provider } from 'react-redux';
+import { store } from '../../store';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, []);
-
   return (
-    <Layout>{isLoading ? <Loading /> : <Component {...pageProps} />}</Layout>
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
   );
 }

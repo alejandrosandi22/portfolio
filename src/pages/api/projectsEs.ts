@@ -10,7 +10,7 @@ export default function handler(
       image: '/static/images/sp-api-preview.webp',
       title: 'SP-API',
       description:
-        'Is an api of soccer products to use in a e-commerce. Created with Next.js, Typescript and MongoDB',
+        'Una api de productos de fútobl para utilizar en un e-commerce. Creado con Next.js, Typescript y MongoDB',
       url: 'https://sp-api.alejandrosandi.com/',
       github: 'https://github.com/alejandrosandi22/sp-api',
       createdAt: 'May, 2022',
@@ -18,29 +18,28 @@ export default function handler(
     },
     {
       image: '/static/images/projects-manager-preview.webp',
-      title: 'Projects Manager',
+      title: 'Administrador de Proyectos',
       description:
-        'Projects manager app. Created with Next.js, GraphQL and MongoDB',
+        'Una aplicación web de administrador de proyectos. Creado con Next.js, GraphQL y MongoDB',
       url: 'https://projects-manager.alejandrosandi.com/',
       github: 'https://github.com/alejandrosandi22/projects',
       createdAt: 'Mar, 2022',
-      endAt: 'April, 2022',
+      endAt: 'Abril, 2022',
     },
     {
       image: '/static/images/chat-preview.webp',
       title: 'Chat',
-      description:
-        'This is a web app where you can chat with other people. Created with Vue js and Firebase',
+      description: 'Una aplicación web de chat. Creado con Vue js y Firebase',
       url: 'https://chat.alejandrosandi.com',
       github: 'https://github.com/alejandrosandi22/chat',
       createdAt: 'Dec, 2021',
-      endAt: 'Jan, 2022',
+      endAt: 'Enero, 2022',
     },
     {
       image: '/static/images/payment-manager-preview.webp',
-      title: 'Payment Manager',
+      title: 'Administrador de Pagos',
       description:
-        "Client's payment manager of a gym. Created with React, Typescript, Node.js and PostgreSQL.",
+        'Un administrador de pagos para un gimnasio. Creado con React, Typescript, Node.js y PostgreSQL.',
       url: 'https://payment-manager.alejandrosandi.com/',
       github: 'https://github.com/alejandrosandi22/gym-manage-frontend',
       createdAt: 'Mar, 2022',
@@ -48,19 +47,19 @@ export default function handler(
     },
     {
       image: '/static/images/tic-tac-toe-preview.webp',
-      title: 'Tic Tac Toe',
+      title: 'Tres en raya',
       description:
-        'Tic tac toe game is the classic game noughts and crosses, is twith multiplayer or local mode. Created with Vue js and Firebase.',
+        'El clásico juego de gato o tres en raya, con la opción de jugar online o local. Creado con Vue js y Firebase.',
       url: 'https://tic-tac-toe.alejandrosandi.com',
       github: 'https://github.com/alejandrosandi22/tic-tac-toe',
-      createdAt: 'Jan, 2022',
+      createdAt: 'Enero, 2022',
       endAt: 'Feb, 2022',
     },
     {
       image: '/static/images/pomodoro-preview.webp',
       title: 'Pomodoro',
       description:
-        'The Pomodoro technique is a method to improve the management of the time dedicated to an activity. Created with React js and Typescript',
+        'La técnica Pomodoro es un método para mejorar la gestión del tiempo dedicado a una actividad. Creado con React y Typescript',
       url: 'https://pomodoro.alejandrosandi.com',
       github: 'https://github.com/alejandrosandi22/pomodoro',
       createdAt: 'Mar, 2022',
@@ -68,12 +67,12 @@ export default function handler(
     },
     {
       image: '/static/images/memory-preview.webp',
-      title: 'Memory',
+      title: 'Juego Memoria',
       description:
-        'Memory game, where the score of each player is saved in a global ranking. Created with Angular and Firebase.',
+        'Juego de memoria, donde el puntaje es guardado en un rankinkg. Creado con Angular y Firebase.',
       url: 'https://memory.alejandrosandi.com',
       github: 'https://github.com/alejandrosandi22/memory',
-      createdAt: 'Jan, 2022',
+      createdAt: 'Enero, 2022',
       endAt: 'Feb, 2022',
     },
   ]);

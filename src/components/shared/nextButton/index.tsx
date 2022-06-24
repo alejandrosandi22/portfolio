@@ -1,4 +1,5 @@
-import { useAppDispatch, useAppSelector } from '../../../../hooks';
+import Image from 'next/image';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { setRotate } from '../../../../store/rotateReducer';
 import styles from '../../../styles/NextButton.module.scss';
 
@@ -70,10 +71,13 @@ export default function NextButton() {
         rotate.current === 'aboutMe' ? styles.isActive : ''
       }`}
     >
-      <button
-        onClick={goToDifferentView}
-        className={`fal fa-chevron-double-down ${styles.nextButton}`}
-      ></button>
+      <button onClick={goToDifferentView} className={styles.nextButton}>
+        <Image
+          src='/static/icons/down-arrow.webp'
+          layout='fill'
+          alt='down-arrow'
+        />
+      </button>
     </div>
   );
 }

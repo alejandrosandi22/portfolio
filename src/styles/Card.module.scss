@@ -2,14 +2,14 @@
   position: relative;
   z-index: 10;
   background: var(--card-background);
-  height: 400px;
+  height: 380px;
   width: 300px;
   margin: 0 calc((65vw - 900px) / 6);
   transform: skewY(-10deg);
   transition: 1s;
   &::after {
     z-index: -20;
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -21,7 +21,7 @@
     background: #b0b0b0;
   }
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: -0.98rem;
     left: 0;
@@ -46,8 +46,8 @@
   }
   .preview {
     position: relative;
-    height: 35%;
     width: 100%;
+    aspect-ratio: 89 / 50;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,15 +56,16 @@
       width: 100%;
     }
   }
-  .title {
+  .titleWrapper {
     position: relative;
     height: 14%;
     width: 100%;
     display: flex;
     align-items: center;
-    h3 {
+    .title {
+      width: 100%;
       font-weight: 300;
-      font-size: 1.5rem;
+      font-size: clamp(1.2rem, 1.4vw, 1.5rem);
       text-transform: uppercase;
       padding: 0 1rem;
     }
@@ -76,7 +77,7 @@
     p {
       width: 90%;
       height: 100%;
-      font-size: 0.8rem;
+      font-size: 13px;
     }
   }
   .actions {
@@ -106,17 +107,17 @@
       justify-content: center;
       text-decoration: none;
       &:nth-child(2) {
-        width: fit-content;
-        height: fit-content;
+        position: relative;
+        width: 32px;
+        height: 32px;
         background: transparent;
-        font-size: 2rem;
-        color: #14151b;
       }
     }
   }
   .time {
     height: 10%;
-    h6 {
+    p {
+      font-size: 12px;
       padding: 0 1rem;
       font-weight: 400;
     }
@@ -132,7 +133,6 @@
 @media (max-width: 1650px) {
   .card {
     width: 250px;
-    height: 350px;
     margin: 0 calc((67vw - 750px) / 6);
     .title {
       h3 {
@@ -162,6 +162,7 @@
 @media (max-width: 720px) {
   .card {
     width: 190px;
+    height: 350px;
     margin: calc((65vw - 190px) / 2);
     &::after {
       width: 0.8rem;

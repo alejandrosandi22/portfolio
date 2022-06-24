@@ -9,7 +9,7 @@ export default function Button({
 }) {
   return (
     <>
-      <a className={styles.a} href={href} target='_blank' rel='noreferrer'>
+      <a className={styles.button} href={href} target='_blank' rel='noreferrer'>
         {caption}
       </a>
     </>

@@ -9,12 +9,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    i {
-      font-size: 3rem;
-      color: var(--link);
+    &:nth-child(1) {
+      transform: rotate(180deg);
+    }
+    button {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      border: none;
+      filter: invert(0.95);
       cursor: pointer;
       &:hover {
-        color: var(--link-hover);
+        filter: invert(0.75);
       }
     }
   }
@@ -37,7 +44,7 @@
 @media (max-width: 1024px) {
   .slider {
     aside {
-      i {
+      button {
         font-size: 25px;
       }
     }
