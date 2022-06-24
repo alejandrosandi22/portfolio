@@ -16,16 +16,13 @@
     font-weight: 300;
     text-align: justify;
   }
-  a {
+  .buttonWrapper {
     filter: invert(100%);
   }
   .contactsWrapper {
     display: flex;
     justify-content: space-between;
     width: 15rem;
-    a {
-      filter: invert(0%);
-    }
   }
 }
 
@@ -35,7 +32,7 @@
     height: 65%;
     padding: 0 2rem;
     p {
-      font-size: 1.2rem;
+      font-size: 16px;
     }
   }
 }

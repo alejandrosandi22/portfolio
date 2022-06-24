@@ -1,7 +1,8 @@
 import styles from '../../styles/Slider.module.scss';
 import Card from '../card';
-import { useAppSelector } from '../../../hooks';
+import { useAppSelector } from '../../hooks';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface ProjectType {
   image: string;
@@ -67,7 +68,13 @@ export default function Slider() {
   return (
     <div className={styles.slider}>
       <aside>
-        <i onClick={() => scrollLeft()} className='fas fa-chevron-left'></i>
+        <button onClick={() => scrollLeft()} className='fas fa-chevron-left'>
+          <Image
+            src='/static/icons/right-arrow.webp'
+            layout='fill'
+            alt='right-arrow'
+          />
+        </button>
       </aside>
       <main>
         <span style={scroll} className={styles.scrollable}>
@@ -77,7 +84,13 @@ export default function Slider() {
         </span>
       </main>
       <aside>
-        <i onClick={() => scrollRight()} className='fas fa-chevron-right'></i>
+        <button onClick={() => scrollRight()}>
+          <Image
+            src='/static/icons/right-arrow.webp'
+            layout='fill'
+            alt='right-arrow'
+          />
+        </button>
       </aside>
     </div>
   );

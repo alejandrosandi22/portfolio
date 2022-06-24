@@ -11,14 +11,16 @@
   transition: 0.8s;
   transition-delay: 1.8s;
   .nextButton {
+    position: relative;
     border: none;
     background: transparent;
-    color: var(--link);
-    font-size: 2.5rem;
+    filter: invert(0.75);
+    width: 32px;
+    height: 32px;
     animation: next-button-movement 1s linear infinite;
     cursor: pointer;
     &:hover {
-      color: var(--link-hover);
+      filter: invert(0.95);
     }
   }
 }
@@ -36,13 +38,5 @@
   }
   50% {
     transform: translateY(-1rem);
-  }
-}
-
-@media (max-width: 720px) {
-  .nextButtonWrapper {
-    .nextButton {
-      font-size: 2rem;
-    }
   }
 }

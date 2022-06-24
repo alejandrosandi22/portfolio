@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from '../../../styles/Contacts.module.scss';
 
 export default function Contacts() {
@@ -9,7 +10,7 @@ export default function Contacts() {
         target='_blank'
         rel='noreferrer'
       >
-        <i className='fab fa-github'></i>
+        <Image src='/static/icons/github.webp' layout='fill' alt='github' />
       </a>
       <a
         className={styles.contact}
@@ -17,7 +18,7 @@ export default function Contacts() {
         target='_blank'
         rel='noreferrer'
       >
-        <i className='far fa-envelope'></i>
+        <Image src='/static/icons/gmail.webp' layout='fill' alt='github' />
       </a>
       <a
         className={styles.contact}
@@ -25,7 +26,7 @@ export default function Contacts() {
         target='_blank'
         rel='noreferrer'
       >
-        <i className='fab fa-facebook'></i>
+        <Image src='/static/icons/facebook.webp' layout='fill' alt='github' />
       </a>
       <a
         className={styles.contact}
@@ -33,7 +34,7 @@ export default function Contacts() {
         target='_blank'
         rel='noreferrer'
       >
-        <i className='fab fa-linkedin'></i>
+        <Image src='/static/icons/linkedin.webp' layout='fill' alt='github' />
       </a>
     </>
   );

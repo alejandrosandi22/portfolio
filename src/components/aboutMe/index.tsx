@@ -13,7 +13,7 @@ function AboutMe() {
         <Profile />
         <Technologies />
       </section>
-      <h6 className={styles.h6}> © Alejandro Sandí 2022</h6>
+      <p className={styles.h6}> © Alejandro Sandí 2022</p>
       <NextButton />
     </>
   );

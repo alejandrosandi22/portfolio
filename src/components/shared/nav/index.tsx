@@ -1,13 +1,15 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../../hooks';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { setRotate } from '../../../../store/rotateReducer';
+import { useRouter } from 'next/router';
 import styles from '../../../styles/Nav.module.scss';
 
 export default function Nav() {
   const { rotate } = useAppSelector((state) => state.rotate);
   const dispatch = useAppDispatch();
   const [isActive, setIsActive] = useState<boolean>(false);
+  const router = useRouter();
 
   const handleToggle = () => setIsActive(!isActive);
 
@@ -69,7 +71,7 @@ export default function Nav() {
     <>
       <nav className={styles.nav}>
         <div className={styles.logoWrapper}>
-          <Image src='/logo.png' alt='logo' layout='fill' />
+          <Image src='/logo.webp' alt='logo' layout='fill' />
         </div>
         <div
           onClick={handleToggle}
@@ -81,13 +83,13 @@ export default function Nav() {
         </div>
         <ul className={`${isActive ? '' : styles.hidde}`}>
           <li id='home' onClick={goToHome}>
-            Home
+            {router.asPath === '/' ? 'Home' : 'Inicio'}
           </li>
           <li id='projects' onClick={goToProjects}>
-            Projects
+            {router.asPath === '/' ? 'Projects' : 'Proyectos'}
           </li>
           <li id='aboutMe' onClick={goToAboutMe}>
-            About Me
+            {router.asPath === '/' ? 'About Me' : 'Sobre Mi'}
           </li>
         </ul>
       </nav>
