@@ -8,10 +8,6 @@ import { ProjectsType } from 'types';
 import { GetStaticProps } from 'next';
 import Layout from 'components/layout';
 
-export const config = {
-  unstable_runtimeJS: false,
-};
-
 export default function App({ projects }: { projects: ProjectsType[] }) {
   const { rotate } = useAppSelector((state) => state.rotate);
   const dispatch = useAppDispatch();
@@ -47,7 +43,9 @@ export default function App({ projects }: { projects: ProjectsType[] }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res: Response = await fetch('https://alejandrosandi.com/api/projects');
+  const res: Response = await fetch(
+    'https://alejandrosandi.com/api/projectsEs'
+  );
   const data: ProjectsType[] = await res.json();
 
   return {
