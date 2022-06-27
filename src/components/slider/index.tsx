@@ -3,27 +3,18 @@ import Card from '../card';
 import { useAppSelector } from '../../hooks';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
-interface ProjectType {
-  image: string;
-  title: string;
-  description: string;
-  url: string;
-  github: string;
-  createdAt: string;
-  endAt: string;
-}
+import { ProjectsType, StylesType } from 'types';
 
 export default function Slider() {
   const gettingProjects = useAppSelector((state) => state.projects.projects);
-  const [projects, setProjects] = useState<ProjectType[]>([]);
+  const [projects, setProjects] = useState<ProjectsType[]>([]);
 
   const [count, setCount] = useState<number>(0);
   const [desktopMeasure, setDesktopMeasure] = useState<number>(0);
   const [mobileMeasure, setMobileMeasure] = useState<number>(0);
-  const [scroll, setScroll] = useState<{}>({
-    transform: String,
-    transition: String,
+  const [scroll, setScroll] = useState<StylesType>({
+    transform: 'translate(0)',
+    transition: '0s',
   });
 
   const scrollLeft = () => {
@@ -78,7 +69,7 @@ export default function Slider() {
       </aside>
       <main>
         <span style={scroll} className={styles.scrollable}>
-          {projects.map((project: ProjectType, index: number) => {
+          {projects.map((project: ProjectsType, index: number) => {
             return <Card key={index} {...project} />;
           })}
         </span>

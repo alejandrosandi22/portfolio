@@ -12,9 +12,9 @@ export const rotateSlice = createSlice({
     },
   },
   reducers: {
-    setRotate: (state: RotateState, action: any) => {
-      state.rotate = action.payload;
-    },
+    setRotate: (state: RotateState, action: any) => ({
+      rotate: action.payload,
+    }),
   },
 });
 

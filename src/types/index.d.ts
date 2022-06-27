@@ -20,4 +20,9 @@ type RotateState = {
   };
 };
 
-export type { ProjectsType, RotateState };
+type StylesType = {
+  transform: string;
+  transition: string;
+};
+
+export type { ProjectsType, RotateState, StylesType };
