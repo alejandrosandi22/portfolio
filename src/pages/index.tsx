@@ -9,26 +9,12 @@ import { GetStaticProps } from 'next';
 import Layout from 'components/layout';
 
 export default function App({ projects }: { projects: ProjectsType[] }) {
-  const { rotate } = useAppSelector((state) => state.rotate);
   const dispatch = useAppDispatch();
   const [title, setTitle] = useState<string>('Alejandro Sandí | Web Developer');
 
   useEffect(() => {
     dispatch(setProjects(projects));
   }, [projects, dispatch]);
-
-  useEffect(() => {
-    setTitle(rotate.current);
-    if (rotate.current === 'home') {
-      return setTitle('Alejandro Sandí | Web Developer');
-    }
-    if (rotate.current === 'projects') {
-      return setTitle('Alejandro Sandí | Projects');
-    }
-    if (rotate.current === 'aboutMe') {
-      return setTitle('Alejandro Sandí | About Me');
-    }
-  }, [rotate]);
 
   return (
     <Layout

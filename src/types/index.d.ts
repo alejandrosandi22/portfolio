@@ -8,4 +8,16 @@ type ProjectsType = {
   endAt: string;
 };
 
-export type { ProjectsType };
+type RotateState = {
+  rotate: {
+    current: string;
+    next: string;
+    degrees: {
+      current: number;
+      next: number;
+    };
+    preload: boolean;
+  };
+};
+
+export type { ProjectsType, RotateState };
