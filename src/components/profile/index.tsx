@@ -13,21 +13,22 @@ export default function Profile() {
           <>
             <h1>Who I am?</h1>
             <p>
-              I am a web developer, that I had worked in personal projects using
-              technologies like Javascript, Typescript, and frameworks as
-              Angular, Vue.js and React. I like to learn and investigate about
-              different technologies and tools to progress as a professional.
+              I am a web developer eager to learn and add value to any business.
+              I am passionate about development, therefore, in my free time I
+              dedicate myself to making personal projects using technologies
+              such as Javascript, Typescript, and frameworks such as Angular,
+              Vue.js and React.
             </p>
           </>
         ) : (
           <>
             <h1>Quién soy?</h1>
             <p>
-              Soy un desarrollador web, que he trabajado en proyectos personales
-              usando tecnologías como Javascript, Typescript, y frameworks como
-              Angular, Vue.js y React. Me gusta aprender y investigar sobre
-              diferentes tecnologías y herramientas para progresar como un
-              profesional.
+              Soy un desarrollador web apasionado por aprender y añadir valor a
+              cualquier empresa. El desarrollo me apasiona, por ello, en mi
+              tiempo libre me dedico a relizar proyectos personales usando
+              tecnologías como Javascript, Typescript, y frameworks como
+              Angular, Vue.js y React.
             </p>
           </>
         )}

@@ -6,9 +6,9 @@ import { useRouter } from 'next/router';
 import styles from '../../../styles/Nav.module.scss';
 
 export default function Nav() {
+  const [isActive, setIsActive] = useState<boolean>(false);
   const { rotate } = useAppSelector((state) => state.rotate);
   const dispatch = useAppDispatch();
-  const [isActive, setIsActive] = useState<boolean>(false);
   const router = useRouter();
 
   const handleToggle = () => setIsActive(!isActive);
@@ -17,7 +17,6 @@ export default function Nav() {
     let currentDegrees: number = 0;
 
     setIsActive(false);
-
     if (rotate.current === 'home') return;
     if (rotate.current === 'projects') currentDegrees = 90;
     if (rotate.current === 'aboutMe') currentDegrees = 180;
@@ -53,11 +52,10 @@ export default function Nav() {
     let currentDegrees: number = 0;
 
     setIsActive(false);
-
     if (rotate.current === 'aboutMe') return;
     if (rotate.current === 'home') currentDegrees = 0;
-
     if (rotate.current === 'projects') currentDegrees = 90;
+
     dispatch(
       setRotate({
         current: 'aboutMe',
