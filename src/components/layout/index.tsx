@@ -24,7 +24,6 @@ export default function Layout({
 
   useEffect(() => {
     if (rotate.preload) return;
-    console.log('rotate');
     setTimeout(() => {
       setRotateStyle({
         transform: `rotateX(${rotate.degrees.current}deg) scale(.85) scaleZ(.85)`,

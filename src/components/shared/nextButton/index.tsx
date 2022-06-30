@@ -10,7 +10,7 @@ export default function NextButton() {
   const goToDifferentView = () => {
     if (rotate.preload) dispatch(setRotate({ ...rotate, preload: false }));
     if (rotate.current === 'home' && rotate.next === 'projects') {
-      dispatch(
+      return dispatch(
         setRotate({
           current: 'projects',
           next: 'aboutMe',
@@ -19,7 +19,7 @@ export default function NextButton() {
       );
     }
     if (rotate.current === 'home' && rotate.next === 'aboutMe') {
-      dispatch(
+      return dispatch(
         setRotate({
           current: 'aboutMe',
           next: 'home',
@@ -28,7 +28,7 @@ export default function NextButton() {
       );
     }
     if (rotate.current === 'projects' && rotate.next === 'home') {
-      dispatch(
+      return dispatch(
         setRotate({
           current: 'home',
           next: 'projects',
@@ -37,7 +37,7 @@ export default function NextButton() {
       );
     }
     if (rotate.current === 'projects' && rotate.next === 'aboutMe') {
-      dispatch(
+      return dispatch(
         setRotate({
           current: 'aboutMe',
           next: 'home',
@@ -46,7 +46,7 @@ export default function NextButton() {
       );
     }
     if (rotate.current === 'aboutMe' && rotate.next === 'home') {
-      dispatch(
+      return dispatch(
         setRotate({
           current: 'home',
           next: 'projects',
@@ -55,7 +55,7 @@ export default function NextButton() {
       );
     }
     if (rotate.current === 'aboutMe' && rotate.next === 'projects') {
-      dispatch(
+      return dispatch(
         setRotate({
           current: 'projects',
           next: 'aboutMe',
