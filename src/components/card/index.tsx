@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../../styles/Card.module.scss';
+import styles from 'styles/Card.module.scss';
 import Image from 'next/image';
 import { ProjectsType } from 'types';
 import { useRouter } from 'next/router';

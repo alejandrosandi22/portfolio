@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import styles from '../../styles/Profile.module.scss';
+import styles from 'styles/Profile.module.scss';
 import Button from '../shared/button';
 import Contacts from '../shared/contacts';
 

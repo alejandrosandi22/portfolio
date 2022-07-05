@@ -1,8 +1,43 @@
+import { RotateContext } from 'context/rotate';
 import Head from 'next/head';
-import { ReactNode, useEffect, useRef, useState } from 'react';
-import { useAppSelector } from 'hooks';
+import { ReactNode, useContext, useEffect, useState } from 'react';
 import styles from 'styles/App.module.scss';
-import { StylesType } from 'types';
+
+function setTransitionEffect({
+  current,
+  next,
+  set,
+}: {
+  current: number;
+  next: number;
+  set: any;
+}) {
+  const timeTransition: number = 500;
+
+  setTimeout(() => {
+    set({
+      transform: `rotateX(${current}deg) scale3d(1, 1, 1)`,
+    });
+  }, timeTransition);
+
+  setTimeout(() => {
+    set({
+      transform: `rotateX(${current}deg) scale3d(0.85, 0.85, 0.85)`,
+    });
+  }, timeTransition * 2);
+
+  setTimeout(() => {
+    set({
+      transform: `rotateX(${next}deg) scale3d(0.85, 0.85, 0.85)`,
+    });
+  }, timeTransition * 3);
+
+  setTimeout(() => {
+    set({
+      transform: `rotateX(${next}deg) scale3d(1, 1, 1)`,
+    });
+  }, timeTransition * 4);
+}
 
 export default function Layout({
   home,
@@ -15,35 +50,17 @@ export default function Layout({
   aboutMe: ReactNode;
   title?: string;
 }) {
-  const { rotate } = useAppSelector((state) => state.rotate);
-  const [rotateStyle, setRotateStyle] = useState<StylesType>({
-    transform: 'rotateX(0deg) scale(1) scaleZ(1)',
-    transition: '0s',
-  });
-  const timeTransition = useRef<number>(500);
+  const { rotate } = useContext(RotateContext);
+  const [rotateStyle, setRotateStyle] = useState<{ transform: string }>();
 
   useEffect(() => {
+    const { current, next } = rotate.degrees;
     if (rotate.preload) return;
-    setTimeout(() => {
-      setRotateStyle({
-        transform: `rotateX(${rotate.degrees.current}deg) scale(.85) scaleZ(.85)`,
-        transition: `${timeTransition.current / 1000}s`,
-      });
-    }, timeTransition.current);
-
-    setTimeout(() => {
-      setRotateStyle({
-        transform: `rotateX(${rotate.degrees.next}deg) scale(.85) scaleZ(.85)`,
-        transition: `${timeTransition.current / 1000}s`,
-      });
-    }, timeTransition.current * 2);
-
-    setTimeout(() => {
-      setRotateStyle({
-        transform: `rotateX(${rotate.degrees.next}deg) scale(1) scaleZ(1)`,
-        transition: `${timeTransition.current / 1000}s`,
-      });
-    }, timeTransition.current * 3);
+    return setTransitionEffect({
+      current,
+      next,
+      set: setRotateStyle,
+    });
   }, [rotate]);
 
   return (
