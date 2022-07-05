@@ -1,19 +1,18 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import Home from 'components/home';
 import Projects from 'components/projects';
-import { useAppDispatch } from 'hooks';
-import { setProjects } from '../../../store/projectsReducer';
 import AboutMe from 'components/aboutMe';
 import { ProjectsType } from 'types';
 import { GetStaticProps } from 'next';
-import Layout from 'components/layout';
+import Layout from 'common/layout';
+import { ProjectsContext } from 'context/projects';
 
 export default function App({ projects }: { projects: ProjectsType[] }) {
-  const dispatch = useAppDispatch();
+  const { handleSetProjects } = useContext(ProjectsContext);
 
   useEffect(() => {
-    dispatch(setProjects(projects));
-  }, [projects, dispatch]);
+    handleSetProjects(projects);
+  }, [projects, handleSetProjects]);
 
   return (
     <Layout

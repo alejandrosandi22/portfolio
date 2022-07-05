@@ -1,4 +1,4 @@
-import styles from '../../styles/Home.module.scss';
+import styles from 'styles/Home.module.scss';
 import Nav from '../shared/nav';
 import Contacts from '../shared/contacts';
 import NextButton from '../shared/nextButton';

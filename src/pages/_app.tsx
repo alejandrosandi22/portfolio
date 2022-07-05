@@ -2,9 +2,8 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
-import { Provider } from 'react-redux';
-import { store } from '../../store';
 import Script from 'next/script';
+import Providers from 'common/providers';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -24,9 +23,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     `}
       </Script>
 
-      <Provider store={store}>
+      <Providers>
         <Component {...pageProps} />
-      </Provider>
+      </Providers>
     </>
   );
 }

@@ -1,68 +1,47 @@
 import Image from 'next/image';
-import { useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../hooks';
-import { setRotate } from '../../../../store/rotateReducer';
+import { useContext, useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../../../styles/Nav.module.scss';
+import styles from 'styles/Nav.module.scss';
+import { RotateContext } from 'context/rotate';
 
 export default function Nav() {
+  const { rotate, handleSetRotate: setRotate } = useContext(RotateContext);
   const [isActive, setIsActive] = useState<boolean>(false);
-  const { rotate } = useAppSelector((state) => state.rotate);
-  const dispatch = useAppDispatch();
   const router = useRouter();
 
   const handleToggle = () => setIsActive(!isActive);
 
   const goToHome = () => {
-    let currentDegrees: number = 0;
-
     setIsActive(false);
-    if (rotate.current === 'home') return;
-    if (rotate.current === 'projects') currentDegrees = 90;
-    if (rotate.current === 'aboutMe') currentDegrees = 180;
+    if (rotate.next === 'home') return;
 
-    dispatch(
-      setRotate({
-        current: 'home',
-        next: 'projects',
-        degrees: { current: currentDegrees, next: 0 },
-      })
-    );
+    return setRotate({
+      current: rotate.next,
+      next: 'home',
+      degrees: { current: rotate.degrees.next, next: 0 },
+    });
   };
 
   const goToProjects = () => {
-    let currentDegrees: number = 0;
-
     setIsActive(false);
+    if (rotate.next === 'projects') return;
 
-    if (rotate.current === 'projects') return;
-    if (rotate.current === 'home') currentDegrees = 0;
-    if (rotate.current === 'aboutMe') currentDegrees = 180;
-
-    dispatch(
-      setRotate({
-        current: 'projects',
-        next: 'aboutMe',
-        degrees: { current: currentDegrees, next: 90 },
-      })
-    );
+    return setRotate({
+      current: rotate.next,
+      next: 'projects',
+      degrees: { current: rotate.degrees.next, next: 90 },
+    });
   };
 
   const goToAboutMe = () => {
-    let currentDegrees: number = 0;
-
     setIsActive(false);
-    if (rotate.current === 'aboutMe') return;
-    if (rotate.current === 'home') currentDegrees = 0;
-    if (rotate.current === 'projects') currentDegrees = 90;
+    if (rotate.next === 'aboutMe') return;
 
-    dispatch(
-      setRotate({
-        current: 'aboutMe',
-        next: 'home',
-        degrees: { current: currentDegrees, next: 180 },
-      })
-    );
+    return setRotate({
+      current: rotate.next,
+      next: 'aboutMe',
+      degrees: { current: rotate.degrees.next, next: 180 },
+    });
   };
 
   return (
@@ -80,13 +59,13 @@ export default function Nav() {
           ></div>
         </div>
         <ul className={`${isActive ? '' : styles.hidde}`}>
-          <li id='home' onClick={goToHome}>
+          <li id='home' onClick={() => goToHome()}>
             {router.asPath === '/' ? 'Home' : 'Inicio'}
           </li>
-          <li id='projects' onClick={goToProjects}>
+          <li id='projects' onClick={() => goToProjects()}>
             {router.asPath === '/' ? 'Projects' : 'Proyectos'}
           </li>
-          <li id='aboutMe' onClick={goToAboutMe}>
+          <li id='aboutMe' onClick={() => goToAboutMe()}>
             {router.asPath === '/' ? 'About Me' : 'Sobre Mi'}
           </li>
         </ul>

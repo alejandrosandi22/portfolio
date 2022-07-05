@@ -1,12 +1,12 @@
-import styles from '../../styles/Slider.module.scss';
-import Card from '../card';
-import { useAppSelector } from '../../hooks';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import { useContext, useEffect, useState } from 'react';
 import { ProjectsType, StylesType } from 'types';
+import { ProjectsContext } from 'context/projects';
+import Card from '../card';
+import Image from 'next/image';
+import styles from 'styles/Slider.module.scss';
 
 export default function Slider() {
-  const gettingProjects = useAppSelector((state) => state.projects.projects);
+  const { projects: gettingProjects } = useContext(ProjectsContext);
   const [projects, setProjects] = useState<ProjectsType[]>([]);
 
   const [count, setCount] = useState<number>(0);
