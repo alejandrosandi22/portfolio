@@ -6,16 +6,6 @@ export default function handler(
   res: NextApiResponse<Array<ProjectsType>>
 ) {
   res.status(200).json([
-    /*     {
-      image: '/static/images/sp-api-preview.webp',
-      title: 'SP-API',
-      description:
-        'Is an api of soccer products to use in a e-commerce. Created with Next.js, Typescript and MongoDB',
-      url: 'https://sp-api.alejandrosandi.com/',
-      github: 'https://github.com/alejandrosandi22/sp-api',
-      createdAt: 'May, 2022',
-      endAt: 'Jun, 2022',
-    }, */
     {
       image: '/static/images/projects-manager-preview.webp',
       title: 'Projects Manager',
@@ -78,3 +68,14 @@ export default function handler(
     },
   ]);
 }
+
+/* {
+    image: '/static/images/sp-api-preview.webp',
+    title: 'SP-API',
+    description:
+      'Is an api of soccer products to use in a e-commerce. Created with Next.js, Typescript and MongoDB',
+    url: 'https://sp-api.alejandrosandi.com/',
+    github: 'https://github.com/alejandrosandi22/sp-api',
+    createdAt: 'May, 2022',
+    endAt: 'Jun, 2022',
+  }, */
