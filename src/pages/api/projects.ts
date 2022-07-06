@@ -36,7 +36,7 @@ export default function handler(
       createdAt: 'Dec, 2021',
       endAt: 'Jan, 2022',
     },
-    /*     {
+    {
       image: '/static/images/payment-manager-preview.webp',
       title: 'Payment Manager',
       description:
@@ -45,7 +45,7 @@ export default function handler(
       github: 'https://github.com/alejandrosandi22/gym-manage-frontend',
       createdAt: 'Mar, 2022',
       endAt: 'Mar, 2022',
-    }, */
+    },
     {
       image: '/static/images/tic-tac-toe-preview.webp',
       title: 'Tic Tac Toe',

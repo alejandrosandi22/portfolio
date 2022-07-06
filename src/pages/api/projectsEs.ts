@@ -35,7 +35,7 @@ export default function handler(
       createdAt: 'Dec, 2021',
       endAt: 'Enero, 2022',
     },
-    /*     {
+    {
       image: '/static/images/payment-manager-preview.webp',
       title: 'Administrador de Pagos',
       description:
@@ -44,7 +44,7 @@ export default function handler(
       github: 'https://github.com/alejandrosandi22/gym-manage-frontend',
       createdAt: 'Mar, 2022',
       endAt: 'Mar, 2022',
-    }, */
+    },
     {
       image: '/static/images/tic-tac-toe-preview.webp',
       title: 'Tres en raya',
