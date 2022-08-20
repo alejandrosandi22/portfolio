@@ -65,6 +65,16 @@ export default function handler(
       createdAt: 'Enero, 2022',
       endAt: 'Feb, 2022',
     },
+    {
+      image: '/static/images/qr-generator-preview.webp',
+      title: 'Generador de QR',
+      description:
+        'Un generador de qr, con el cual, se puede generar dicho qr que podrás descargar y utilizar según lo necesites. Creado con Vue.js.',
+      url: 'https://qr-generator.alejandrosandi.com',
+      github: 'https://github.com/alejandrosandi22/qr-generator',
+      createdAt: 'Ag. 20, 2022',
+      endAt: 'Ag. 20, 2022',
+    },
   ]);
 }
 
