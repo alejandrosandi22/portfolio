@@ -66,6 +66,16 @@ export default function handler(
       createdAt: 'Jan, 2022',
       endAt: 'Feb, 2022',
     },
+    {
+      image: '/static/images/qr-generator-preview.webp',
+      title: 'QR Generator',
+      description:
+        'It is an qr generator, to create an qr with an text or url to share to more people. Created with Vue.js.',
+      url: 'https://qr-generator.alejandrosandi.com',
+      github: 'https://github.com/alejandrosandi22/qr-generator',
+      createdAt: 'Aug 20, 2022',
+      endAt: 'Aug 20, 2022',
+    },
   ]);
 }
 
