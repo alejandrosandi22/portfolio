@@ -54,7 +54,7 @@ function Project() {
               <HighlightedResource
                 title='A Clean and Intuitive Interface'
                 description='Designed with simplicity in mind, it offers a seamless experience for both users and developers.'
-                src='https://i.ibb.co/WcLP6f0/dashboard-shrinkr.webp'
+                src='https://i.ibb.co/3dLb74x/shkr-link-landing-page.png'
                 height={1920}
                 width={4657}
                 containerClassName='w-full md:w-3/5'
@@ -70,7 +70,7 @@ function Project() {
               />
             </div>
             <HighlightedResource
-              src='https://shkr.link/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-image-dark.726957f7.webp&w=1920&q=100'
+              src='https://i.ibb.co/WcLP6f0/dashboard-shrinkr.webp'
               height={900}
               width={1600}
             />
@@ -100,12 +100,12 @@ function Project() {
               />
             </div>
             <HighlightedResource
-              src='https://shkr.link/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-image-dark.726957f7.webp&w=1920&q=100'
+              src='https://i.ibb.co/WcLP6f0/dashboard-shrinkr.webp'
               height={900}
               width={1600}
             />
             <HighlightedResource
-              src='https://shkr.link/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-image-dark.726957f7.webp&w=1920&q=100'
+              src='https://i.ibb.co/WcLP6f0/dashboard-shrinkr.webp'
               height={900}
               width={1600}
             />

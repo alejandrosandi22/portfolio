@@ -51,7 +51,7 @@ function Projects() {
         />
         <ProjectCard
           className='lg:flex-row-reverse'
-          image='https://shkr.link/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-image-dark.726957f7.webp&w=1920&q=100'
+          image='https://i.ibb.co/WcLP6f0/dashboard-shrinkr.webp'
           title='Shrinkr URL Shortener'
           description={
             <div>
