@@ -1,6 +1,7 @@
 import Background from '@/assets/Background';
 import Skills from '@/components/home/Skills';
 import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
 
 function Hero() {
   return (
@@ -23,9 +24,13 @@ function Hero() {
           high-quality, results-oriented projects.
         </h2>
       </div>
-      <div className='relative z-10 mt-16 flex flex-col items-center justify-center gap-10 md:flex-row'>
-        <Button>Discover My Work</Button>
-        <Button variant='outline'>Collaborate with Me</Button>
+      <div className='relative z-10 mt-16 flex flex-col items-center justify-center gap-5 md:flex-row md:gap-10'>
+        <Button asChild>
+          <Link href='#projects'>Discover My Work</Link>
+        </Button>
+        <Button variant='outline' asChild>
+          <Link href='#contact'>Collaborate with Me</Link>
+        </Button>
       </div>
       <div className='mt-20 flex w-full items-center justify-center md:mt-32'>
         <Skills />

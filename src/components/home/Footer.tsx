@@ -48,21 +48,30 @@ function Footer() {
             <ul className='flex items-center justify-center space-x-4 xl:justify-end'>
               <li>
                 <Button variant='ghost' asChild>
-                  <Link href='https://linkedin.com/in/alejandrosandi'>
+                  <Link
+                    href='https://linkedin.com/in/alejandrosandi'
+                    target='_blank'
+                  >
                     <LinkedInIcon width={16} height={16} />
                   </Link>
                 </Button>
               </li>
               <li>
                 <Button variant='ghost' asChild>
-                  <Link href='mailto:a.sandi.developer@gmail.com'>
+                  <Link
+                    href='mailto:a.sandi.developer@gmail.com'
+                    target='_blank'
+                  >
                     <EmailIcon width={16} height={16} />
                   </Link>
                 </Button>
               </li>
               <li>
                 <Button variant='ghost' asChild>
-                  <Link href='https://github.com/alejandrosandi22'>
+                  <Link
+                    href='https://github.com/alejandrosandi22'
+                    target='_blank'
+                  >
                     <GitHubIcon width={16} height={16} />
                   </Link>
                 </Button>

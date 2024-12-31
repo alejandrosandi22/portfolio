@@ -40,13 +40,16 @@ function AboutMe() {
               </p>
             </div>
             <div className='left-0 right-0 m-auto flex w-full gap-3'>
-              <Link href='https://linkedin.com/in/alejandrosandi'>
+              <Link
+                href='https://linkedin.com/in/alejandrosandi'
+                target='_blank'
+              >
                 <LinkedInIcon width={24} height={24} />
               </Link>
-              <Link href='mailto:a.sandi.developer@gmail.com'>
+              <Link href='mailto:a.sandi.developer@gmail.com' target='_blank'>
                 <EmailIcon width={24} height={24} />
               </Link>
-              <Link href='https://github.com/alejandrosandi22'>
+              <Link href='https://github.com/alejandrosandi22' target='_blank'>
                 <GitHubIcon width={24} height={24} />
               </Link>
             </div>

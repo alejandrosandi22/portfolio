@@ -56,7 +56,9 @@ function ProjectCard({
         <CardFooter className='flex justify-between gap-2'>
           <div className='relative z-10'>
             <Button variant={'outline'} asChild className='bg-card'>
-              <Link href={path}>View case study</Link>
+              <Link href={path} target='_blank'>
+                View case study
+              </Link>
             </Button>
           </div>
           <div className='flex gap-3'>
