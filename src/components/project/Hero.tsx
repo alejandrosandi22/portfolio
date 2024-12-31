@@ -6,6 +6,7 @@ import { JSX } from 'react';
 const inter = Roboto({
   weight: ['900'],
   style: 'normal',
+  subsets: ['latin']
 });
 
 type HeroProps = {
