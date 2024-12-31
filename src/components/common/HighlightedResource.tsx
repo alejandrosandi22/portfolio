@@ -22,7 +22,7 @@ function HighlightedResource({
 }: HighlightedResourceProps) {
   return (
     <div className={cn('flow-root', containerClassName)}>
-      <div className='flex h-full max-h-[1700px] flex-col overflow-hidden rounded-xl bg-gray-400/5 p-2 shadow-md ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
+      <div className='flex max-h-[1700px] flex-col overflow-hidden rounded-xl bg-gray-400/5 p-2 shadow-md ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
         <div className='mb-auto flex-grow-0'>
           {title ? (
             <h6 className='mb-2 mt-4 text-2xl font-bold md:text-3xl lg:text-4xl'>

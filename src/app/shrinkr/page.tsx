@@ -14,7 +14,7 @@ function Project() {
     <main>
       <Hero
         title='Shrinkr URL Shortener'
-        video='https://imagekit.io/player/embed/alejandrosandi/sample-video.mp4?updatedAt=1735490918512&thumbnail=https%3A%2F%2Fik.imagekit.io%2Falejandrosandi%2Fsample-video.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1735490918512&updatedAt=1735490918512'
+        video='https://ik.imagekit.io/alejandrosandi/shrinkr_app.mp4?updatedAt=1735616468851'
         description='A user-friendly URL shortener that simplifies link sharing.'
         technologies={[TypeScriptIcon, NextJSIcon, NestJSIcon]}
         endDate={new Date(2024, 5, 24)}
@@ -61,8 +61,7 @@ function Project() {
               />
 
               <HighlightedResource
-                title='Mobile Home View'
-                description='This is the view of the home page, but moblie!'
+                title='Mobile Homepage'
                 src='https://i.ibb.co/CPGfhJv/Shrinkr-Mobile-Landing-Page.png'
                 height={4775}
                 width={540}
@@ -70,44 +69,64 @@ function Project() {
               />
             </div>
             <HighlightedResource
+              title='User Insights'
+              description='Get a quick overview of key metrics and insights'
               src='https://i.ibb.co/WcLP6f0/dashboard-shrinkr.webp'
               height={900}
               width={1600}
             />
             <div className='flex flex-col gap-8 md:flex-row lg:gap-16'>
-              <HighlightedResource
-                title='Mobile Home View Title'
-                description='This is the view of the home page, but moblie!'
-                src='https://i.ibb.co/CPGfhJv/Shrinkr-Mobile-Landing-Page.png'
-                height={4775}
-                width={540}
-                imageClassName='w-full'
-              />
-              <HighlightedResource
-                title='Mobile Home'
-                src='https://i.ibb.co/CPGfhJv/Shrinkr-Mobile-Landing-Page.png'
-                height={4775}
-                width={540}
-                imageClassName='w-full'
-              />
-              <HighlightedResource
-                title='Mobile Home View'
-                description='This is the view of the home page, but moblie!'
-                src='https://i.ibb.co/CPGfhJv/Shrinkr-Mobile-Landing-Page.png'
-                height={4775}
-                width={540}
-                imageClassName='w-full'
-              />
+              <div className='md:w-1/3'>
+                <HighlightedResource
+                  title='URL List'
+                  description='Keep track of your custom URLs and their performance'
+                  src='https://i.ibb.co/tm65vCJ/shrinkr-urls-list.webp'
+                  width={414}
+                  height={896}
+                  imageClassName='w-full'
+                />
+              </div>
+              <div className='md:w-1/3'>
+                <HighlightedResource
+                  title='Account Settings'
+                  description='Tailor your account to fit your preferences.'
+                  src='https://i.ibb.co/WFCVwYF/shrinkr-settings.webp'
+                  width={414}
+                  height={896}
+                  imageClassName='w-full'
+                />
+              </div>
+              <div className='md:w-1/3'>
+                <HighlightedResource
+                  title='Support Center'
+                  description='Get help with any issues you may encounter.'
+                  src='https://i.ibb.co/KySbz88/shrinkr-support.png'
+                  width={414}
+                  height={896}
+                  imageClassName='w-full'
+                />
+              </div>
             </div>
             <HighlightedResource
-              src='https://i.ibb.co/WcLP6f0/dashboard-shrinkr.webp'
+              title='Intuitive Light Mode Interface'
+              description='Experience a bright and airy workspace.'
+              src='https://i.ibb.co/PWBk3T7/shrinkr-lightmode.webp'
+              height={1076}
+              width={1920}
+            />
+            <HighlightedResource
+              title='Create Short Links & QR Codes'
+              description='Share Your Content Easily with Short Links and QR Codes'
+              src='https://i.ibb.co/NVQqpzG/shrinkr-shorten-url-no-registered.webp'
               height={900}
               width={1600}
             />
             <HighlightedResource
-              src='https://i.ibb.co/WcLP6f0/dashboard-shrinkr.webp'
-              height={900}
-              width={1600}
+              title='In-depth Link Performance'
+              description="Gain valuable insights into your link's performance."
+              src='https://i.ibb.co/nDmskMr/shrinkr-url-stats.webp'
+              height={1920}
+              width={2346}
             />
           </div>
         }
