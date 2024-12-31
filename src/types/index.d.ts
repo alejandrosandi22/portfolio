@@ -1,28 +1,19 @@
-type ProjectsType = {
-  image: string;
-  title: string;
-  description: string;
-  url: string;
-  github: string;
-  createdAt: string;
-  endAt: string;
+type IconProps = {
+  width?: number;
+  height?: number;
 };
 
-type RotateState = {
-  rotate: {
-    current: string;
-    next: string;
-    degrees: {
-      current: number;
-      next: number;
-    };
-    preload: boolean;
-  };
+type ErrorState = {
+  message: string;
+  type?: string;
 };
 
-type StylesType = {
-  transform: string;
-  transition: string;
+type SuccessState = {
+  message: string;
+  data?: unknown;
 };
 
-export type { ProjectsType, RotateState, StylesType };
+type ApiResponse = {
+  success: SuccessState | null;
+  error: ErrorState | null;
+};
