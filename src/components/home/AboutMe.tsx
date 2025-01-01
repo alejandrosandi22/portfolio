@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 function AboutMe() {
   return (
-    <section id='about-me'>
+    <section id='about-me' className='mt-10'>
       <Card className='rounded-none border-l-0 border-r-0'>
         <CardHeader>
           <div className='mb-8 flex w-full flex-col items-center'>
