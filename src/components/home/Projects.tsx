@@ -12,7 +12,7 @@ function Projects() {
           Selected Projects
         </span>
         <h2 className='w-full px-5 text-center text-3xl font-medium md:text-4xl lg:text-5xl'>
-          Designing for the Digital World
+          Bringing ideas to life through code
         </h2>
       </div>
       <div className='flex w-full flex-col items-center gap-16 px-5'>
