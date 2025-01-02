@@ -2,6 +2,7 @@
 
 import NestJSIcon from '@/assets/svg/NestJSIcon';
 import NextJSIcon from '@/assets/svg/NextJSIcon';
+import PostgreSQLIcon from '@/assets/svg/PostgreSQLIcon';
 import TypeScriptIcon from '@/assets/svg/TypeScriptIcon';
 import HighlightedResource from '@/components/common/HighlightedResource';
 import Hero from '@/components/project/Hero';
@@ -16,7 +17,7 @@ function Project() {
         title='Shrinkr URL Shortener'
         video='https://ik.imagekit.io/alejandrosandi/shrinkr_app.mp4?updatedAt=1735616468851'
         description='A user-friendly URL shortener that simplifies link sharing.'
-        technologies={[TypeScriptIcon, NextJSIcon, NestJSIcon]}
+        technologies={[TypeScriptIcon, NextJSIcon, NestJSIcon, PostgreSQLIcon]}
         endDate={new Date(2024, 5, 24)}
         repository='https://github.com/alejandrosandi22/shrinkr-client'
       />
