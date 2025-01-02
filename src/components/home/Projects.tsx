@@ -1,6 +1,7 @@
 import FirebaseIcon from '@/assets/svg/FirebaseIcon';
 import NestJSIcon from '@/assets/svg/NestJSIcon';
 import NextJSIcon from '@/assets/svg/NextJSIcon';
+import PostgreSQLIcon from '@/assets/svg/PostgreSQLIcon';
 import TypeScriptIcon from '@/assets/svg/TypeScriptIcon';
 import ProjectCard from './ProjectCard';
 
@@ -77,7 +78,7 @@ function Projects() {
             </div>
           }
           path='/shrinkr'
-          skills={[TypeScriptIcon, NextJSIcon, NestJSIcon]}
+          skills={[TypeScriptIcon, NextJSIcon, NestJSIcon, PostgreSQLIcon]}
         />
       </div>
     </section>
