@@ -7,6 +7,7 @@ import NextJSIcon from '@/assets/svg/NextJSIcon';
 import NodeIcon from '@/assets/svg/NodeIcon';
 import ReactIcon from '@/assets/svg/ReactIcon';
 import TypeScriptIcon from '@/assets/svg/TypeScriptIcon';
+import VuejsIcon from '@/assets/svg/VuejsIcon';
 import { Card, CardContent } from '@/components/ui/Card';
 import {
   Carousel,
@@ -27,6 +28,9 @@ const skills = [
   },
   {
     icon: <NextJSIcon />,
+  },
+  {
+    icon: <VuejsIcon />,
   },
   {
     icon: <GitIcon />,
