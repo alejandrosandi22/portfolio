@@ -71,7 +71,7 @@ function Contact() {
             type='text'
             id='reason'
             name='reason'
-            placeholder='Tell us about it'
+            placeholder='Tell me about it'
             required
           />
         </div>
