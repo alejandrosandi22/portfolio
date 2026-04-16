@@ -1,5 +1,3 @@
-'use server';
-
 import NestJSIcon from '@/assets/svg/NestJSIcon';
 import NextJSIcon from '@/assets/svg/NextJSIcon';
 import PostgreSQLIcon from '@/assets/svg/PostgreSQLIcon';

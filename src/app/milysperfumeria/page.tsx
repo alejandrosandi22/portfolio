@@ -1,5 +1,3 @@
-'use server';
-
 import FirebaseIcon from '@/assets/svg/FirebaseIcon';
 import NextJSIcon from '@/assets/svg/NextJSIcon';
 import TypeScriptIcon from '@/assets/svg/TypeScriptIcon';
