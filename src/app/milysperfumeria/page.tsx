@@ -16,9 +16,12 @@ function ProjectPage() {
         title='Mily&#x27;s Perfumer&iacute;a y m&aacute;s'
         video='https://ik.imagekit.io/alejandrosandi/milysperfumeria.mp4?updatedAt=1735600385988'
         description='Perfume website designed to boost sales with a user-friendly interface'
-        technologies={[TypeScriptIcon, NextJSIcon, FirebaseIcon]}
+        technologies={[
+          { Icon: TypeScriptIcon, label: 'TypeScript' },
+          { Icon: NextJSIcon, label: 'Next.js' },
+          { Icon: FirebaseIcon, label: 'Firebase' },
+        ]}
         endDate={new Date(2022, 10, 23)}
-        website='https://milysperfumeria.com'
       />
       <Overview
         content={[

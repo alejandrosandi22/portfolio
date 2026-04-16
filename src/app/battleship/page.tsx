@@ -12,7 +12,7 @@ function BattleShipProject() {
         title='BattleShip Game'
         video='https://ik.imagekit.io/alejandrosandi/battleship.mp4?updatedAt=1735934432720'
         description='A two-player Battleship game, allowing players to compete against each other.'
-        technologies={[PythonIcon]}
+        technologies={[{ Icon: PythonIcon, label: 'Python' }]}
         endDate={new Date(2024, 7, 25)}
         repository='https://github.com/alejandrosandi22/battleship'
       />

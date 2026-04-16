@@ -17,30 +17,14 @@ import {
 import Autoplay from 'embla-carousel-autoplay';
 
 const skills = [
-  {
-    icon: <TypeScriptIcon />,
-  },
-  {
-    icon: <JavaScriptIcon />,
-  },
-  {
-    icon: <ReactIcon />,
-  },
-  {
-    icon: <NextJSIcon />,
-  },
-  {
-    icon: <VuejsIcon />,
-  },
-  {
-    icon: <GitIcon />,
-  },
-  {
-    icon: <NestJSIcon />,
-  },
-  {
-    icon: <NodeIcon />,
-  },
+  { icon: <TypeScriptIcon aria-hidden='true' />, label: 'TypeScript' },
+  { icon: <JavaScriptIcon aria-hidden='true' />, label: 'JavaScript' },
+  { icon: <ReactIcon aria-hidden='true' />, label: 'React' },
+  { icon: <NextJSIcon aria-hidden='true' />, label: 'Next.js' },
+  { icon: <VuejsIcon aria-hidden='true' />, label: 'Vue.js' },
+  { icon: <GitIcon aria-hidden='true' />, label: 'Git' },
+  { icon: <NestJSIcon aria-hidden='true' />, label: 'NestJS' },
+  { icon: <NodeIcon aria-hidden='true' />, label: 'Node.js' },
 ];
 
 function Skills() {
@@ -59,6 +43,7 @@ function Skills() {
           align: 'start',
           loop: true,
         }}
+        aria-label='Technology skills'
         className='relative z-0 w-full max-w-sm px-10 lg:px-0'
       >
         <CarouselContent>
@@ -66,6 +51,7 @@ function Skills() {
             <CarouselItem
               key={index}
               className='basis-1/3 lg:basis-1/3 xl:basis-1/4'
+              aria-label={item.label}
             >
               <div className='p-1'>
                 <Card className='border-none bg-transparent'>

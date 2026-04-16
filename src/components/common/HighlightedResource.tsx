@@ -40,7 +40,7 @@ function HighlightedResource({
             src={src}
             width={width}
             height={height}
-            alt='Product Preview'
+            alt={title ? `${title} screenshot` : 'Project screenshot'}
             quality={100}
             className={cn('rounded-md object-cover object-top', imageClassName)}
           />

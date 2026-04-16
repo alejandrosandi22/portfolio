@@ -47,32 +47,36 @@ function Footer() {
 
             <ul className='flex items-center justify-center space-x-4 xl:justify-end'>
               <li>
-                <Button variant='ghost' asChild>
+                <Button variant='ghost' size='icon' asChild>
                   <Link
                     href='https://linkedin.com/in/alejandrosandi'
                     target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='LinkedIn profile (opens in new tab)'
                   >
-                    <LinkedInIcon width={16} height={16} />
+                    <LinkedInIcon width={16} height={16} aria-hidden='true' />
                   </Link>
                 </Button>
               </li>
               <li>
-                <Button variant='ghost' asChild>
+                <Button variant='ghost' size='icon' asChild>
                   <Link
                     href='mailto:a.sandi.developer@gmail.com'
-                    target='_blank'
+                    aria-label='Send email to Alejandro Sandí'
                   >
-                    <EmailIcon width={16} height={16} />
+                    <EmailIcon width={16} height={16} aria-hidden='true' />
                   </Link>
                 </Button>
               </li>
               <li>
-                <Button variant='ghost' asChild>
+                <Button variant='ghost' size='icon' asChild>
                   <Link
                     href='https://github.com/alejandrosandi22'
                     target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='GitHub profile (opens in new tab)'
                   >
-                    <GitHubIcon width={16} height={16} />
+                    <GitHubIcon width={16} height={16} aria-hidden='true' />
                   </Link>
                 </Button>
               </li>

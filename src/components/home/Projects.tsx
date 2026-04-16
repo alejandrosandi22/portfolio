@@ -45,7 +45,12 @@ function Projects() {
             </div>
           }
           path='/shrinkr'
-          skills={[TypeScriptIcon, NextJSIcon, NestJSIcon, PostgreSQLIcon]}
+          skills={[
+            { Icon: TypeScriptIcon, label: 'TypeScript' },
+            { Icon: NextJSIcon, label: 'Next.js' },
+            { Icon: NestJSIcon, label: 'NestJS' },
+            { Icon: PostgreSQLIcon, label: 'PostgreSQL' },
+          ]}
         />
         <ProjectCard
           className='lg:flex-row-reverse'
@@ -79,7 +84,11 @@ function Projects() {
             </div>
           }
           path='/milysperfumeria'
-          skills={[TypeScriptIcon, NextJSIcon, FirebaseIcon]}
+          skills={[
+            { Icon: TypeScriptIcon, label: 'TypeScript' },
+            { Icon: NextJSIcon, label: 'Next.js' },
+            { Icon: FirebaseIcon, label: 'Firebase' },
+          ]}
         />
 
         <ProjectCard
@@ -110,7 +119,7 @@ function Projects() {
             </div>
           }
           path='/battleship'
-          skills={[PythonIcon]}
+          skills={[{ Icon: PythonIcon, label: 'Python' }]}
         />
       </div>
     </section>

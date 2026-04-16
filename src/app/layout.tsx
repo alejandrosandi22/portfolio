@@ -56,8 +56,15 @@ function RootLayout({
     <html lang='en'>
       <body
         className={`bg-background text-primary-foreground antialiased ${migra.variable} ${helvetica.variable}`}
+        suppressHydrationWarning
       >
-        <main className='w-full overflow-x-hidden font-helvetica'>
+        <a
+          href='#main-content'
+          className='sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-background focus:px-4 focus:py-2 focus:text-primary-foreground focus:outline-none focus:ring-2 focus:ring-ring'
+        >
+          Skip to main content
+        </a>
+        <main id='main-content' className='w-full overflow-x-hidden font-helvetica'>
           <Navbar />
           {children}
           <Footer />

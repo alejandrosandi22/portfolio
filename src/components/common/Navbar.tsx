@@ -30,9 +30,9 @@ function Navbar() {
           </Button>
         </SheetTrigger>
         <SheetContent side='left'>
-          <SheetTitle className='hidden'>
-            <VisuallyHidden.Root>x</VisuallyHidden.Root>
-          </SheetTitle>
+          <VisuallyHidden.Root asChild>
+            <SheetTitle>Navigation Menu</SheetTitle>
+          </VisuallyHidden.Root>
           <Link href='/' className='mr-6 hidden lg:flex'>
             <Icon />
             <span className='sr-only'>
@@ -72,7 +72,7 @@ function Navbar() {
         </SheetContent>
       </Sheet>
       <div className='left-0 right-0 m-auto flex w-full max-w-default justify-between'>
-        <Link href='/#home' className='mr-6 hidden lg:flex'>
+        <Link href='/' className='mr-6 hidden lg:flex'>
           <Icon />
           <span className='sr-only'>
             Alejandro Sandí - Front-End & Back-End Developer | Portfolio

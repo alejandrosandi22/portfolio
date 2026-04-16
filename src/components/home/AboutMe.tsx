@@ -43,14 +43,24 @@ function AboutMe() {
               <Link
                 href='https://linkedin.com/in/alejandrosandi'
                 target='_blank'
+                rel='noopener noreferrer'
+                aria-label='LinkedIn profile (opens in new tab)'
               >
-                <LinkedInIcon width={24} height={24} />
+                <LinkedInIcon width={24} height={24} aria-hidden='true' />
               </Link>
-              <Link href='mailto:a.sandi.developer@gmail.com' target='_blank'>
-                <EmailIcon width={24} height={24} />
+              <Link
+                href='mailto:a.sandi.developer@gmail.com'
+                aria-label='Send email to Alejandro Sandí'
+              >
+                <EmailIcon width={24} height={24} aria-hidden='true' />
               </Link>
-              <Link href='https://github.com/alejandrosandi22' target='_blank'>
-                <GitHubIcon width={24} height={24} />
+              <Link
+                href='https://github.com/alejandrosandi22'
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label='GitHub profile (opens in new tab)'
+              >
+                <GitHubIcon width={24} height={24} aria-hidden='true' />
               </Link>
             </div>
           </div>

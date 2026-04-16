@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import { JSX } from 'react';
 
 type InformationProps = {
-  technologies: Array<(props: IconProps) => JSX.Element>;
+  technologies: TechnologyItem[];
   website?: string;
   repository?: string;
   endDate: Date;
@@ -26,11 +25,12 @@ function Information({
         <div>
           <dt>Technologies</dt>
           <dd className='flex gap-3'>
-            {technologies.map((IconComponent, index) => (
-              <IconComponent
-                key={`technologie-${index}`}
+            {technologies.map(({ Icon, label }, index) => (
+              <Icon
+                key={`technology-${index}`}
                 width={24}
                 height={24}
+                aria-label={label}
               />
             ))}
           </dd>
@@ -42,7 +42,9 @@ function Information({
               <Link
                 href={repository}
                 target='_blank'
+                rel='noopener noreferrer'
                 className='text-foreground hover:underline'
+                aria-label='View source repository (opens in new tab)'
               >
                 Visit
               </Link>
@@ -58,7 +60,9 @@ function Information({
               <Link
                 href={website}
                 target='_blank'
+                rel='noopener noreferrer'
                 className='text-foreground hover:underline'
+                aria-label='Visit live website (opens in new tab)'
               >
                 Visit
               </Link>

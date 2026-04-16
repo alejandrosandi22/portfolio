@@ -17,7 +17,12 @@ function Project() {
         title='Shrinkr URL Shortener'
         video='https://ik.imagekit.io/alejandrosandi/shrinkr_app.mp4?updatedAt=1735616468851'
         description='A user-friendly URL shortener that simplifies link sharing.'
-        technologies={[TypeScriptIcon, NextJSIcon, NestJSIcon, PostgreSQLIcon]}
+        technologies={[
+          { Icon: TypeScriptIcon, label: 'TypeScript' },
+          { Icon: NextJSIcon, label: 'Next.js' },
+          { Icon: NestJSIcon, label: 'NestJS' },
+          { Icon: PostgreSQLIcon, label: 'PostgreSQL' },
+        ]}
         endDate={new Date(2024, 5, 24)}
         repository='https://github.com/alejandrosandi22/shrinkr-client'
       />

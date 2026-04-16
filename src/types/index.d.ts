@@ -1,19 +1,28 @@
-type IconProps = {
-  width?: number;
-  height?: number;
-};
+import type { JSX } from 'react';
 
-type ErrorState = {
-  message: string;
-  type?: string;
-};
+declare global {
+  type IconProps = {
+    width?: number;
+    height?: number;
+  };
 
-type SuccessState = {
-  message: string;
-  data?: unknown;
-};
+  type TechnologyItem = {
+    Icon: (props: IconProps) => JSX.Element;
+    label: string;
+  };
 
-type ApiResponse = {
-  success: SuccessState | null;
-  error: ErrorState | null;
-};
+  type ErrorState = {
+    message: string;
+    type?: string;
+  };
+
+  type SuccessState = {
+    message: string;
+    data?: unknown;
+  };
+
+  type ApiResponse = {
+    success: SuccessState | null;
+    error: ErrorState | null;
+  };
+}

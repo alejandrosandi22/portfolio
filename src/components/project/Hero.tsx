@@ -1,7 +1,6 @@
 import Information from '@/components/project/Information';
 import cn from '@/utils/cn';
 import { Roboto } from 'next/font/google';
-import { JSX } from 'react';
 
 const inter = Roboto({
   weight: ['900'],
@@ -13,7 +12,7 @@ type HeroProps = {
   title: string;
   description: string;
   video: string;
-  technologies: Array<(props: IconProps) => JSX.Element>;
+  technologies: TechnologyItem[];
   website?: string;
   repository?: string;
   endDate: Date;
